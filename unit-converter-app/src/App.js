@@ -13,6 +13,10 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
+{/*Material UI Logo Imports */}
+import { ThermostatIcon, SquareFootIcon, CropIcon, ScaleIcon, ScienceIcon, CurrencyExchangeIcon, AccessTimeFilledIcon, SpeedIcon, PowerIcon, ExploreIcon, BarChartIcon, LocalGasStationIcon} from '@mui/icons-material';
+
+
 function App() {
 
   const [checked, setChecked] = useState(false);
@@ -70,7 +74,7 @@ function App() {
           <div className='convert-div d-flex justify-content-center' >
             <div style={{flexDirection: "column", width: "100%"}}>
               <br></br>
-              <div className='d-flex justify-content-center'>
+              <div className='d-flex justify-content-center header-box'>
                 <div className='d-flex justify-content-center convert-div-title-box text-light'>From</div>
               </div>
               <br></br>
@@ -91,9 +95,9 @@ function App() {
           </div>
         </Col>
         
-        <Col xs={12} md={2} className='d-flex justify-content-center'>
+        <Col xs={12} md={2} className='d-flex justify-content-center mt-auto mb-auto'>
           <div className='switch-units-div'>
-            Col2
+            Swap
           </div>
         
         </Col>
@@ -101,7 +105,7 @@ function App() {
         <div className='convert-div d-flex justify-content-center' >
             <div style={{flexDirection: "column", width: "100%"}}>
               <br></br>
-              <div className='d-flex justify-content-center'>
+              <div className='d-flex justify-content-center header-box'>
                 <div className='d-flex justify-content-center convert-div-title-box text-light'>To</div>
               </div>
               <br></br>
