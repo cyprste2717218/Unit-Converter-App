@@ -45,7 +45,7 @@ function App() {
     </Navbar>
     <br></br>
     <div className='d-flex justify-content-center app-font' style={{backgroundColor: "#D9D9D9"}}>
-      <section style={{overflowX: "scroll"}}>
+      <section className='hide-scroll' style={{overflowX: "scroll"}}>
         <ButtonGroup className='bg-white'>
             {radios.map((radio, idx) => (
               <ToggleButton

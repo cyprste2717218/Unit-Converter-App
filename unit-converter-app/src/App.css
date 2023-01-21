@@ -28,6 +28,10 @@
   font-size: 2.5em;
 }
 
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .switch-units-div {
   width: 60px;
   height: 60px;
