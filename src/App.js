@@ -1,6 +1,7 @@
 import './App.css';
 import './logic.js';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Container from 'react-bootstrap/Container';
@@ -83,23 +84,6 @@ class App extends React.Component {
   }
 
 
-
-  componentDidMount() {
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '3739d2b214mshee86954a2de063ep1adeadjsn96821c0cd45f',
-        'X-RapidAPI-Host': 'unit-converter2.p.rapidapi.com'
-      }
-    };
-    
-    fetch('https://unit-converter2.p.rapidapi.com/Quantities/Length/Units', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-    
-  
-  }
   render() {
 
 
@@ -137,7 +121,7 @@ class App extends React.Component {
                     <option>Option1</option>
                   </select>
               
-                  <input onChange={(e) => convert(e.currentTarget.value)} type="text"></input>
+                  <input type="text"></input>
                 </div>
                 <br></br>
                 <br></br>
