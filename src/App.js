@@ -41,6 +41,7 @@ function CategoryOptions() {
 
 
 
+
   return (
     <div className='d-flex justify-content-center app-font' style={{backgroundColor: "#D9D9D9"}}>
     <section className='hide-scroll' style={{overflowX: "scroll"}}>
@@ -71,17 +72,99 @@ function CategoryOptions() {
     </div>)
 }
 
-class App extends React.Component {
 
-  // Constructor 
-  constructor(props) {
-    super(props);
+function FromMetricImperialOptions() {
+  const [fromSelected, setFromSelected] = useState(false);
+  const [fromUnitOption, setFromUnitOption] = useState('fromMetricOn');
 
-    this.state = {
-        response: [],
+  const fromMetricImperialRadios = [
+    {name: 'fromMetric', value: 'fromMetricOn', icon: '', text: 'Metric'},
+    {name: 'fromImperial', value: 'fromImperialOn', icon: '', text: 'Imperial'}
+  ]
+
+  return (
+  <section>
+    <ButtonGroup className='bg-white'>
+      {fromMetricImperialRadios.map((fromOption, fromUnitType) => (
+        <ToggleButton
+        key={fromUnitType}
+        id={`fromMIradio-${fromUnitType}`}
+        type="radio"
+        variant={'outline-dark'}
+        name="fromOption"
+        value={fromOption.value}
+        checked={fromUnitOption === fromOption.value}
+        onChange={(e) => setFromUnitOption(e.currentTarget.value)}
+        className='fromMLUnitType'
+        size='lg'
+        >
+          {fromOption.text}
+
+        </ToggleButton>
+
+      ))}
+    </ButtonGroup>
+  </section>
+  
+  
+  
+  )
+
+}
+
+
+
+function ToMetricImperialOptions() {
+
+  const [toSelected, setToSelected] = useState(false);
+  const [toUnitOption, setToUnitOption] = useState('toImperialOn');
+
+  const toMetricImperialRadios = [
+    {name: 'toMetric', value: 'toMetricOn', icon: '', text: 'Metric'},
+    {name: 'toImperial', value: 'toImperialOn', icon: '', text: 'Imperial'}
+  ]
+
+  return (
+  <section>
+    <ButtonGroup className='bg-white'>
+      {toMetricImperialRadios.map((toOption, toUnitType) => (
+        <ToggleButton
+        key={toUnitType}
+        id={`toMIradio-${toUnitType}`}
+        type="radio"
+        variant={'outline-dark'}
+        name="toOption"
+        value={toOption.value}
+        checked={toUnitOption === toOption.value}
+        onChange={(e) => setToUnitOption(e.currentTarget.value)}
+        className='toMLUnitType'
+        size='lg'
+        >
+          {toOption.text}
+          
         
-    };
-  }
+        </ToggleButton>
+
+      ))}
+    </ButtonGroup>
+  </section>
+  
+  
+  
+  )
+
+
+}
+
+
+
+
+
+
+
+
+
+class App extends React.Component {
 
 
   render() {
@@ -114,6 +197,10 @@ class App extends React.Component {
                 </div>
                 <br></br>
                 <br></br>
+                <div className="imperial-metric-unit-options">
+                  <FromMetricImperialOptions />
+                </div>
+                <br></br>
                 <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
 
                   <select className='dropdown-styling'>  
@@ -123,6 +210,7 @@ class App extends React.Component {
               
                   <input type="text"></input>
                 </div>
+               
                 <br></br>
                 <br></br>
                 <br></br>
@@ -152,12 +240,18 @@ class App extends React.Component {
                 </div>
                 <br></br>
                 <br></br>
+                <div className="imperial-metric-unit-options">
+                    <ToMetricImperialOptions />
+                </div>
+                <br></br>
                 <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
+                  
                   <select className='dropdown-styling'>
                     <option>Option1</option>
                   </select>
                   <input type="text"></input>
                 </div>
+            
                 <br></br>
                 <br></br>
                 <br></br>
