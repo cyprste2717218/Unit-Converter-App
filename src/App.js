@@ -177,7 +177,7 @@ class App extends React.Component {
       <>
       <Navbar variant="dark" style={{ backgroundColor: "#3EAD17", height: "150px" }}>
         <Container style={{display: "flex", justifyContent: "center"}}>
-         <p className='navbar-text app-font text-center'>Unit Converter</p>
+          <Navbar.Brand className='app-font text-center' style={{fontSize: "2.5em"}}>Unit Converter</Navbar.Brand>
         </Container>
   
       </Navbar>
