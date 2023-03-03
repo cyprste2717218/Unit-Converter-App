@@ -1,4 +1,4 @@
-/*function unitsTypes(unitCategory, unitOption) {
+function unitsTypes(unitCategory, unitOption) {
 
     const unitTypes = [
 
@@ -11,13 +11,5 @@
     ]
 
 
-    return (
-        {unitTypes.map((unit, unit-value) => {
-
-
-        })}
-    )
-
 
 } 
-*/
