@@ -43,34 +43,37 @@ function CategoryOptions() {
 
 
   return (
-    <div className='d-flex justify-content-center app-font' style={{backgroundColor: "#D9D9D9"}}>
-    <section className='hide-scroll' style={{overflowX: "scroll"}}>
-      <ButtonGroup className='bg-white'>
-          {radios.map((radio, idx) => (
-            <ToggleButton
-              key={idx}
-              id={`radio-${idx}`}
-              type="radio"
-              variant={'outline-primary'}
-              name="radio"
-              value={radio.value}
-              checked={radioValue === radio.value}
-              onChange={(e) => setRadioValue(e.currentTarget.value)}
-              className='unit-category'
-            >
-              <MaterialIcon icon={radio.icon} size={45}/>
-              <br></br>
-              {radio.name}
-              
-              
-            </ToggleButton>
-            
-          ))}
-        </ButtonGroup>     
+    <section id="unit-conversion-options">
+      <div className='d-flex justify-content-center app-font' style={{backgroundColor: "#D9D9D9"}}>
+        <div className='hide-scroll' style={{overflowX: "scroll"}}>
+          <ButtonGroup role='Unit Conversion Category Options Toolbar' aria-label='Unit Conversion Category Options Toolbar' className='bg-white'>
+              {radios.map((radio, idx) => (
+                <ToggleButton
+                  key={idx}
+                  id={`radio-${idx}`}
+                  type="radio"
+                  variant={'outline-primary'}
+                  name="radio"
+                  value={radio.value}
+                  checked={radioValue === radio.value}
+                  onChange={(e) => setRadioValue(e.currentTarget.value)}
+                  className='unit-category'
+                >
+                  <MaterialIcon icon={radio.icon} size={45}/>
+                  <br></br>
+                  {radio.name}
+                  
+                  
+                </ToggleButton>
+                
+              ))}
+            </ButtonGroup>     
+        </div>
+    
+      </div>
     </section>
-   
-    </div>)
-}
+    
+    )}
 
 
 function FromMetricImperialOptions() {
@@ -83,7 +86,6 @@ function FromMetricImperialOptions() {
   ]
 
   return (
-  <section>
     <ButtonGroup className='bg-white'>
       {fromMetricImperialRadios.map((fromOption, fromUnitType) => (
         <ToggleButton
@@ -104,7 +106,7 @@ function FromMetricImperialOptions() {
 
       ))}
     </ButtonGroup>
-  </section>
+ 
   
   
   
@@ -125,7 +127,6 @@ function ToMetricImperialOptions() {
   ]
 
   return (
-  <section>
     <ButtonGroup className='bg-white'>
       {toMetricImperialRadios.map((toOption, toUnitType) => (
         <ToggleButton
@@ -147,9 +148,7 @@ function ToMetricImperialOptions() {
 
       ))}
     </ButtonGroup>
-  </section>
-  
-  
+
   
   )
 
@@ -175,103 +174,112 @@ class App extends React.Component {
     return (
     
       <>
-      <Navbar variant="dark" style={{ backgroundColor: "#3EAD17", height: "150px" }}>
-        <Container style={{display: "flex", justifyContent: "center"}}>
-          <Navbar.Brand className='app-font text-center' style={{fontSize: "2.5em"}}>Unit Converter</Navbar.Brand>
-        </Container>
-  
-      </Navbar>
-      <br></br>
-  
-      <CategoryOptions />
-
-      <br></br>
-      <Container className='d-flex justify-content-center app-font'>
-        <Row>
-          <Col xs={12} md={5} className='d-flex justify-content-center'>
-            <div className='convert-div d-flex justify-content-center' >
-              <div style={{flexDirection: "column", width: "100%"}}>
-                <br></br>
-                <div className='d-flex justify-content-center'>
-                  <div className='d-flex justify-content-center convert-div-title-box text-light'>From</div>
-                </div>
-                <br></br>
-                <br></br>
-                <div className="imperial-metric-unit-options">
-                  <FromMetricImperialOptions />
-                </div>
-                <br></br>
-                <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
-
-                  <select className='dropdown-styling'>  
-                   
-                    <option>Option1</option>
-                  </select>
-              
-                  <input type="text"></input>
-                </div>
-               
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-              </div>
-            </div>
-            
-          </Col>
+      <header>
+        <Navbar variant="dark" style={{ backgroundColor: "#3EAD17", height: "150px" }}>
+          <Container style={{display: "flex", justifyContent: "center"}}>
+            <Navbar.Brand className='app-font text-center' style={{fontSize: "2.5em"}}>Unit Converter</Navbar.Brand>
+          </Container>
     
-          <Col xs={12} md={2} className='d-flex justify-content-center'>
-            
-            <div className='switch-units-div'>
-              <Button>
-                <MaterialIcon icon="swap_horiz" size={55}/>
-              </Button>
-            </div>
-          
-          </Col>
-          <Col xs={12} md={5} className='d-flex justify-content-center'>
-          <div className='convert-div d-flex justify-content-center' >
-              <div style={{flexDirection: "column", width: "100%"}}>
-                <br></br>
-                <div className='d-flex justify-content-center'>
-                  <div className='d-flex justify-content-center convert-div-title-box text-light'>To</div>
-                </div>
-                <br></br>
-                <br></br>
-                <div className="imperial-metric-unit-options">
-                    <ToMetricImperialOptions />
-                </div>
-                <br></br>
-                <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
+        </Navbar>
+    
+        <br></br>
+    
+        <CategoryOptions />
+      </header>
+
+      <main>
+        <section id="from-to-conversion-elements">
+          <br></br>
+          <Container className='d-flex justify-content-center app-font'>
+            <Row>
+              <Col xs={12} md={5} className='d-flex justify-content-center'>
+                <div className='convert-div d-flex justify-content-center' >
+                  <div style={{flexDirection: "column", width: "100%"}}>
+                    <br></br>
+                    <div className='d-flex justify-content-center'>
+                      <h2 className='d-flex justify-content-center convert-div-title-box text-light'>From</h2>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div className="imperial-metric-unit-options">
+                      <FromMetricImperialOptions />
+                    </div>
+                    <br></br>
+                    <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
+
+                      <select className='dropdown-styling'>  
+                      
+                        <option>Option1</option>
+                      </select>
                   
-                  <select className='dropdown-styling'>
-                    <option>Option1</option>
-                  </select>
-                  <input type="text"></input>
+                      <input type="text"></input>
+                    </div>
+                  
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                  </div>
                 </div>
-            
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-              </div>
-            </div>
-          
-          </Col>
-        </Row>
-      </Container>
+                
+              </Col>
+        
+              <Col xs={12} md={2} className='d-flex justify-content-center'>
+                
+                <div className='switch-units-div'>
+                  <Button>
+                    <MaterialIcon icon="swap_horiz" size={55}/>
+                  </Button>
+                </div>
+              
+              </Col>
+              <Col xs={12} md={5} className='d-flex justify-content-center'>
+              <div className='convert-div d-flex justify-content-center' >
+                  <div style={{flexDirection: "column", width: "100%"}}>
+                    <br></br>
+                    <div className='d-flex justify-content-center'>
+                      <h2 className='d-flex justify-content-center convert-div-title-box text-light'>To</h2>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div className="imperial-metric-unit-options">
+                        <ToMetricImperialOptions />
+                    </div>
+                    <br></br>
+                    <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
+                      
+                      <select className='dropdown-styling'>
+                        <option>Option1</option>
+                      </select>
+                      <input type="text"></input>
+                    </div>
+                
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                  </div>
+                </div>
+              
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      </main>
       
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className='footer'>
-        <p className='app-font'>Developed by <a style={{color: "#3399FF"}} href="https://github.com/cyprste2717218">@cyprste2717218</a></p>
-      </div>
+      <footer>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className='app-footer'>
+          <p className='app-font'>Developed by <a style={{color: "#3399FF"}} href="https://github.com/cyprste2717218">@cyprste2717218</a></p>
+        </div>
+      </footer>
       
       </>
       
