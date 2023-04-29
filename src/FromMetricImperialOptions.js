@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
 export default function FromMetricImperialOptions(props) {
+    const {metric, imperial } = props;
+
     const [fromSelected, setFromSelected] = useState(false);
     const [fromUnitOption, setFromUnitOption] = useState('fromMetricOn');
   
@@ -29,11 +31,13 @@ export default function FromMetricImperialOptions(props) {
           size='lg'
           >
             {fromOption.text}
+            {metric}
   
           </ToggleButton>
   
         ))}
       </ButtonGroup>
+
    
     
     

@@ -17,6 +17,7 @@ import MaterialIcon from 'react-google-material-icons';
 import UnitsTypes from './units.js';
 import FromMetricImperialOptions from './FromMetricImperialOptions';
 import ToMetricImperialOptions from './ToMetricImperialOptions';
+import FromOptionsData from './FromOptionsData';
 
 
 
@@ -151,13 +152,14 @@ class App extends React.Component {
                     <br></br>
                     <div className="imperial-metric-unit-options">
                       <FromMetricImperialOptions />
+                     
                     </div>
                     <br></br>
                     <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
 
                     <select className='dropdown-styling'>  
                       
-                      <option><UnitsTypes/></option>
+                      <option></option>
                     </select>
                   
                       <input type="text"></input>
