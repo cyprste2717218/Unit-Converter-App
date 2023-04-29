@@ -14,29 +14,39 @@ import Button from 'react-bootstrap/Button';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import MaterialIcon from 'react-google-material-icons';
-
+import UnitsTypes from './units.js';
+import FromMetricImperialOptions from './FromMetricImperialOptions';
+import ToMetricImperialOptions from './ToMetricImperialOptions';
 
 
 
 
 
 function CategoryOptions() {
+
   const [checked, setChecked] = useState(false);
-  const [radioValue, setRadioValue] = useState('1');
+  const [radioValue, setRadioValue] = useState('Temperature');
+
+  const changeCategory = (inputCategory) => {
+    setRadioValue(inputCategory);
+
+    
+   
+  };
 
   const radios = [
-    { name: 'Temperature', value: '1', icon: "device_thermostat" },
-    { name: 'Length', value: '2', icon: "square_foot" },
-    { name: 'Area', value: '3', icon: "crop_square" },
-    { name: 'Weight', value: '4', icon: "scale" },
-    { name: 'Volume', value: '5', icon: "view_in_ar" },
-    { name: 'Currency', value: '6', icon: "attach_money" },
-    { name: 'Time', value: '7', icon: "schedule" },
-    { name: 'Speed', value: '8', icon: "speed" },
-    { name: 'Power', value: '9', icon: "bolt" },
-    { name: 'Angle', value: '10', icon: "text_rotation_angleup" },
-    { name: 'Data', value: '11', icon: "leaderboard" },
-    { name: 'Fuel', value: '12', icon: "battery_charging_full" },
+    { value: 'Temperature', name: 'TempCatg', icon: "device_thermostat" },
+    { value: 'Length', name: 'LengthCatg', icon: "square_foot" },
+    { value: 'Area', name: 'AreaCatg', icon: "crop_square" },
+    { value: 'Weight', name: 'WeightCatg', icon: "scale" },
+    { value: 'Volume', name: 'VolCatg', icon: "view_in_ar" },
+    { value: 'Currency', name: 'CurrCatg', icon: "attach_money" },
+    { value: 'Time', name: 'TimeCatg', icon: "schedule" },
+    { value: 'Speed', name: 'SpeedCatg', icon: "speed" },
+    { value: 'Power', name: 'PowerCatg', icon: "bolt" },
+    { value: 'Angle', name: 'AngleCatg', icon: "text_rotation_angleup" },
+    { value: 'Data', name: 'DataCatg', icon: "leaderboard" },
+    { value: 'Fuel', name: 'FuelCatg', icon: "battery_charging_full" },
   ];
 
 
@@ -56,12 +66,12 @@ function CategoryOptions() {
                   name="radio"
                   value={radio.value}
                   checked={radioValue === radio.value}
-                  onChange={(e) => setRadioValue(e.currentTarget.value)}
+                  onChange={(e) => changeCategory(e.target.value)}
                   className='unit-category'
                 >
                   <MaterialIcon icon={radio.icon} size={45}/>
                   <br></br>
-                  {radio.name}
+                  {radio.value}
                   
                   
                 </ToggleButton>
@@ -69,94 +79,31 @@ function CategoryOptions() {
               ))}
             </ButtonGroup>     
         </div>
-    
+       
+        <UnitsTypes type={radioValue} />
       </div>
     </section>
     
     )}
 
 
-function FromMetricImperialOptions() {
-  const [fromSelected, setFromSelected] = useState(false);
-  const [fromUnitOption, setFromUnitOption] = useState('fromMetricOn');
 
-  const fromMetricImperialRadios = [
-    {name: 'fromMetric', value: 'fromMetricOn', icon: '', text: 'Metric'},
-    {name: 'fromImperial', value: 'fromImperialOn', icon: '', text: 'Imperial'}
-  ]
 
-  return (
-    <ButtonGroup className='bg-white'>
-      {fromMetricImperialRadios.map((fromOption, fromUnitType) => (
-        <ToggleButton
-        key={fromUnitType}
-        id={`fromMIradio-${fromUnitType}`}
-        type="radio"
-        variant={'outline-dark'}
-        name="fromOption"
-        value={fromOption.value}
-        checked={fromUnitOption === fromOption.value}
-        onChange={(e) => setFromUnitOption(e.currentTarget.value)}
-        className='fromMLUnitType'
-        size='lg'
-        >
-          {fromOption.text}
 
-        </ToggleButton>
 
-      ))}
-    </ButtonGroup>
- 
-  
-  
-  
+
+
+
+function Conversion(category) {
+
+
+  return(
+    <>
+    <p></p>
+    </>
   )
 
 }
-
-
-
-function ToMetricImperialOptions() {
-
-  const [toSelected, setToSelected] = useState(false);
-  const [toUnitOption, setToUnitOption] = useState('toImperialOn');
-
-  const toMetricImperialRadios = [
-    {name: 'toMetric', value: 'toMetricOn', icon: '', text: 'Metric'},
-    {name: 'toImperial', value: 'toImperialOn', icon: '', text: 'Imperial'}
-  ]
-
-  return (
-    <ButtonGroup className='bg-white'>
-      {toMetricImperialRadios.map((toOption, toUnitType) => (
-        <ToggleButton
-        key={toUnitType}
-        id={`toMIradio-${toUnitType}`}
-        type="radio"
-        variant={'outline-dark'}
-        name="toOption"
-        value={toOption.value}
-        checked={toUnitOption === toOption.value}
-        onChange={(e) => setToUnitOption(e.currentTarget.value)}
-        className='toMLUnitType'
-        size='lg'
-        >
-          {toOption.text}
-          
-        
-        </ToggleButton>
-
-      ))}
-    </ButtonGroup>
-
-  
-  )
-
-
-}
-
-
-
 
 
 
@@ -165,10 +112,11 @@ function ToMetricImperialOptions() {
 
 class App extends React.Component {
 
+  
 
   render() {
 
-
+  
     
    
     return (
@@ -207,10 +155,10 @@ class App extends React.Component {
                     <br></br>
                     <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
 
-                      <select className='dropdown-styling'>  
+                    <select className='dropdown-styling'>  
                       
-                        <option>Option1</option>
-                      </select>
+                      <option><UnitsTypes/></option>
+                    </select>
                   
                       <input type="text"></input>
                     </div>
