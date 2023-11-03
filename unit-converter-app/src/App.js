@@ -21,9 +21,9 @@ import FromToUnitsOptions from './components/from-to-units-options';
 const App = () => {
 
   const [checked, setChecked] = useState(false);
-  const [radioValue, setRadioValue] = useState('1');
-  const [currentUnits, setCurrentUnits] = useState('');
-
+  const [categoryValue, setCategoryValue] = useState('Temperature');
+  const [currentUnits, setCurrentUnits] = useState(['Celsius', 'Farenheit', 'Kelvin', 'Rankine', 'Réaumur', 'Newton', 'Rømer', 'Delisle', 'Leiden', 'Wedgwood', 'Gas mark']);
+  
 
 
   return (
@@ -38,8 +38,8 @@ const App = () => {
     <br></br>
     <UnitCategoryOptions
 
-      radioValue={radioValue}
-      setRadioValue={setRadioValue}
+      categoryValue={categoryValue}
+      setCategoryValue={setCategoryValue}
       currentUnits={currentUnits}
       setCurrentUnits={setCurrentUnits}
 

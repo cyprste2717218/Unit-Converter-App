@@ -1,13 +1,14 @@
 import { Col } from "react-bootstrap";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRotate } from '@fortawesome/free-solid-svg-icons';
 const SwapDetailsButton = () => {
 
     return (
-        <Col xs={12} md={2} className='d-flex justify-content-center mt-auto mb-auto'>
+        <Col xs={12} md={2} className='d-flex justify-content-center mt-auto mb-auto swap-details-btn'>
             <div className='switch-units-div'>
-            Swap
+                <FontAwesomeIcon id='switch-units-icon' icon={faRotate}  />
             </div>
-      </Col>
+        </Col>
     )
 }
 

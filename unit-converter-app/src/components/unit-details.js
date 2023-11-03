@@ -1,6 +1,23 @@
 import { Col } from "react-bootstrap";
+import { useRef, useEffect } from "react";
 
-const UnitDetails = ({title, options}) => {
+const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails}) => {
+
+    
+
+
+   
+    const handleSelectChange = (e) => {
+      
+      if (title === 'From') {
+        setFromUnitDetails(e.target.value);
+      } else if (title === 'To') {
+        setToUnitDetails(e.target.value);
+      }
+      
+  
+    }
+
     return (
         <Col xs={12} md={5} className='d-flex justify-content-center'>
           <div className='convert-div d-flex justify-content-center' >
@@ -12,15 +29,12 @@ const UnitDetails = ({title, options}) => {
               <br></br>
               <br></br>
               <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
-                {console.log("Options:", options)}
-                <select className='dropdown-styling'>
-                    {console.log("Options:", options)}
+                <select onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
                     {options.map(currentOption => 
                         <option>{currentOption}</option>
-                    ) }
-                 {/* to render from props using .map */}
+                    ) }   
                 </select>
-                <input type="text"></input>
+                <input type="number"></input>
               </div>
               <br></br>
               <br></br>

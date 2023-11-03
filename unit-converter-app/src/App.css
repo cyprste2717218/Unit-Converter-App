@@ -11,6 +11,15 @@
 
 }
 
+.unit-option {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  height: 100px;
+  border: 1px solid #000; 
+  text-align: center;
+}
+
 .convert-div {
   width: 90vw;
   background-color: #D9D9D9;
@@ -23,10 +32,26 @@
 }
 
 .switch-units-div {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 32px;
 }
+
+.switch-units-div:hover {
+  animation: switch-units-scale-up-anim 0.15s ease-in-out forwards, switch-units-colour-focus-anim 0.15s ease-in-out forwards, switch-units-rotate-forward-anim 0.6s ease-in-out forwards;
+}
+
+.switch-units-div:not(:hover) {
+  animation: switch-units-scale-down-anim 0.15s ease-in-out forwards, switch-units-colour-unfocus-anim 0.15s ease-in-out forwards, switch-units-rotate-backward-anim 0.6s ease-in-out forwards;
+}
+
+
+
+
 
 .dropdown-styling {
   height:  80px;
@@ -40,3 +65,88 @@
 .header-box {
   font-size: 2em;
 }
+
+
+/* Animations */
+
+@keyframes switch-units-scale-up-anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes switch-units-scale-down-anim {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes switch-units-scale-up-down-anim {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes switch-units-colour-focus-anim {
+  from {
+    background-color: #D9D9D9;
+    color: #000;
+  }
+  to {
+    background-color: blue;
+    color: #fff;
+    
+  }
+}
+
+@keyframes switch-units-colour-unfocus-anim {
+  from {
+    background-color: blue;
+    color: #fff;
+  }
+  to {
+    background-color: #d9d9d9;
+    color: #000;
+    
+  }
+}
+
+@keyframes switch-units-rotate-forward-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes switch-units-rotate-backward-anim {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* @keyframes switch-units-font-anim {
+  from {
+    font-size: 32px;
+  }
+
+  to {
+    font-size: 32px;
+  }
+} */
