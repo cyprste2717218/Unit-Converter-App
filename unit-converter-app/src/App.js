@@ -1,21 +1,14 @@
-import { ThermostatIcon, SquareFootIcon, CropIcon, ScaleIcon, ScienceIcon, CurrencyExchangeIcon, AccessTimeFilledIcon, SpeedIcon, PowerIcon, ExploreIcon, BarChartIcon, LocalGasStationIcon} from '@mui/icons-material';import './App.css';
+import './App.css';
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Row, Col, ButtonGroup} from 'react-bootstrap'
-import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
-import ToggleButton from 'react-bootstrap/ToggleButton';
-import Dropdown from 'react-bootstrap/Dropdown';
+
 
 /* Component Imports */
 import UnitCategoryOptions from './components/unit-category-options';
 import FromToUnitsOptions from './components/from-to-units-options';
-
+import Footer from './components/footer';
+import UnitConvNavbar from './components/unit-conv-navbar';
 
 
 const App = () => {
@@ -29,12 +22,10 @@ const App = () => {
   return (
     
     <>
-    <Navbar variant="dark" style={{ backgroundColor: "#3EAD17", height: "150px" }}>
-      <Container style={{display: "flex", justifyContent: "center"}}>
-       <p className='navbar-text'>Unit Converter</p>
-      </Container>
+    <UnitConvNavbar />
+    <div style={{minHeight: "88vh"}}>
 
-    </Navbar>
+   
     <br></br>
     <UnitCategoryOptions
 
@@ -45,18 +36,19 @@ const App = () => {
 
     />
     
-    <br></br>
+    <br></br><br></br>
     <FromToUnitsOptions
 
       currentUnits={currentUnits}
-    
+      categoryValue={categoryValue}
     />
     
     <br></br>
     <br></br>
     <br></br>
     <br></br>
-    <div className='footer'></div>
+    </div>
+    <Footer />
     
     </>
     

@@ -16,7 +16,7 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
         return (
             <Col className='unit-option' onClick={() => 
                 handleClick(option)}
-                xs={2} sm={2} md={2} lg={1} style={{
+                xs={4} sm={2} md={2} lg={1}  style={{
                 backgroundColor: option.name === categoryValue ? '#005ec2' : '#fff',
                 color: option.name === categoryValue ? '#fff' : '#000'}}>
                 <FontAwesomeIcon icon={option.icon} size='lg' style={{fontSize: '30px', marginBottom: '10px'}} />
@@ -43,9 +43,9 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
       /* define lists here with units for each unit category */
     
       const units = {
-        'Temperature': ['Celsius', 'Farenheit', 'Kelvin', 'Rankine', 'Réaumur', 'Newton', 'Rømer', 'Delisle', 'Leiden', 'Wedgwood', 'Gas mark'],
-        'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Lea', 'Fathom', 'Nautical Mile', 'Angstrom', 'Micrometer', 'Light-year', 'Astronomical Unit', 'Parsec', 'Megaparsec', 'Gigaparsec'],
-        'Area': ['Square Metre', 'Square Kilometer', 'Square Centimeter', 'Square Millimeter', 'Square Inch', 'Square Foot', 'Square Yard', 'Square Mile', 'Acre', 'Hectare', 'Square League'],
+        'Temperature': ['Celsius', 'Farenheit', 'Kelvin'],
+        'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Nautical Mile','Nanometre'],
+        'Area': ['Square Metre', 'Square Kilometer', 'Square Inch', 'Square Foot', 'Square Yard', 'Square Mile', 'Acre', 'Hectare'],
         'Weight': ['Miligram', 'Gram', 'Kilogram', 'Tonne', 'Ounce', 'Pound', 'Stone', 'Short Ton', 'Metric Ton'],
         'Volume': ['Cubic Meter', 'Cubic Centimeter', 'Cubic Millimeter', 'Cubic Inch', 'Cubic Foot', 'Cubic Yard', 'Milliliter', 'Liter', 'Kiloliter', 'Dal', 'Peck', 'Gallon', 'Barrel', 'Hogshead', 'Butt', 'Tun'],
         'Currency': ['United States Dollar (USD)', 'Euro (EUR)', 'Japanese Yen (JPY)', 'British Pound (GBP)', 'Australian Dollar (AUD)', 'Canadian Dollar (CAD)', 'Swiss Franc (CHF)', 'Chinese Yuan Renminbi (CNY)', 'Indian Rupee (INR)', 'Brazilian Real (BRL)', 'Russian Ruble (RUB)', 'Mexican Peso (MXN)'],
@@ -61,7 +61,7 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
 
 
     return (
-        <div className='d-flex justify-content-center' style={{backgroundColor: '#D9D9D9', overflowX: 'scroll'}}>
+        <div  style={{backgroundColor: '#D9D9D9', overflowX: "scroll", display: "flex", flexDirection: "row"}}>
     
             {options.map((option, idx) => (
                 <UnitOption option={option} />

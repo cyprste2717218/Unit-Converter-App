@@ -1,11 +1,16 @@
 import { Col } from "react-bootstrap";
-import { useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails}) => {
-
+const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue}) => {
     
+    useEffect(() => {
+      const firstOptionValue = document.querySelector('#select-element').firstChild.value;
+      //setCurrentValue(firstOptionValue);
+    }, [])
 
-
+    const handleCurrentValueChange = (e) => {
+      setCurrentValue(e.target.value);
+    }
    
     const handleSelectChange = (e) => {
       
@@ -15,36 +20,52 @@ const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails}) => 
         setToUnitDetails(e.target.value);
       }
       
-  
     }
 
     return (
-        <Col xs={12} md={5} className='d-flex justify-content-center'>
-          <div className='convert-div d-flex justify-content-center' >
-            <div style={{flexDirection: "column", width: "100%"}}>
-              <br></br>
-              <div className='d-flex justify-content-center header-box'>
-                <div className='d-flex justify-content-center convert-div-title-box text-light'>{title}</div>
+      <div className="unit-details-div">
+        <Col xs={10} sm={10} md={7} lg={8}>
+      
+        <div style={{flexDirection: "column"}} className='d-flex justify-content-center convert-div' >
+          
+            
+            <div className='convert-div-title-box text-light header-box'>
+              <div style={{display: "flex", justifyContent: "center"}}>
+              {title}
               </div>
-              <br></br>
-              <br></br>
-              <div className='d-flex justify-content-center' style={{columnGap: "40px"}}>
-                <select onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
-                    {options.map(currentOption => 
-                        <option>{currentOption}</option>
-                    ) }   
-                </select>
-                <input type="number"></input>
-              </div>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
             </div>
-          </div>
+            <br></br><br></br><br></br>
+            <div className="larger-br-elems">
+              <br></br><br></br>
+            </div>
+            <div>   
+              <span className="unit-details-span">
+                <div style={{display: "flex", justifyContent: "center"}}>
+
+               
+                <select id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
+                    {
+                    options.map(currentOption => 
+                        <option>{currentOption}</option>
+                    )}   
+                </select>
+              
+                
+                {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" />)}   
+                </div>
+                </span>  
+            </div>
+            <br></br><br></br>
+            <div className="mobile-br-elems">
+              <br></br><br></br>
+            </div>
+            <div className="larger-br-elems">
+              <br></br><br></br><br></br><br></br>
+            </div>
+         
+        </div>
         </Col>
+      </div>
     )
 }
 
