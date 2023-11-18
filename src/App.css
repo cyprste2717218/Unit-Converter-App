@@ -1,62 +1,248 @@
-.navbar-text {
-  font-size: 50px !important;
-  color: #FFFFFF;
-}
+
 
 .unit-category {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   background-color: #FFFFFF;
   overflow: visible;
 
+}
 
+.unit-option {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  height: 100px;
+  border: 1px solid #000; 
+  text-align: center;
 }
 
 .convert-div {
-  width: 90vw;
+
   background-color: #D9D9D9;
 }
 
-
-.app-font {
-  font-family: 'Work Sans', sans-serif;
-}
-
 .convert-div-title-box {
-  width: 90%; 
   height: 80px; 
-  background-color: #346C2A;
-  font-size: 2.5em;
-}
-
-.hide-scroll::-webkit-scrollbar {
-  display: none;
+  background-color: #346C2A
 }
 
 .switch-units-div {
   width: 60px;
   height: 60px;
   background-color: #D9D9D9;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-.dropdown-styling {
-  height:  80px;
-}
-
-.imperial-metric-unit-options {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  font-size: 32px;
 }
 
-.app-footer {
-  height: 150px;
+.switch-units-div:hover {
+  animation: switch-units-scale-up-anim 0.15s ease-in-out forwards, switch-units-colour-focus-anim 0.15s ease-in-out forwards, switch-units-rotate-forward-anim 0.6s ease-in-out forwards;
+}
+
+.switch-units-div:not(:hover) {
+  animation: switch-units-scale-down-anim 0.15s ease-in-out forwards, switch-units-colour-unfocus-anim 0.15s ease-in-out forwards, switch-units-rotate-backward-anim 0.6s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+.footer {
+ 
+  position: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
   background-color: #D9D9D9;
-  font-size: 1.5em;
-  text-align: center;
+  
+}
+
+.header-box {
+  font-size: 35px;
+}
+
+
+@media screen and (min-width: 1024px)  {
+
+  
+  .navbar-div {
+    background-color: #3EAD17; 
+    height: 150px;
+  }
+
+  .navbar-text {
+    font-size: 45px;
+    color: #FFFFFF !important;
+  }
+
+  .from-to-unit-options {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .unit-details-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-br-elems {
+    display: none;
+  }
+
+  .dropdown-styling {
+    width: 20%;
+    height:  100px;
+  }
+
+  .larger-br-elems {
+    display: block;
+  }
+
+
+
 
 }
+
+@media screen and (max-width: 1023px) {
+
+  .navbar-text {
+    font-size: 30px;
+    color: #FFFFFF !important;
+  }
+
+  .navbar-div {
+    background-color: #3EAD17; 
+    height: 100px;
+    font-size: 1px;
+  }
+
+  .from-to-unit-options {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .unit-details-div {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .unit-details-span {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .switch-units-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-br-elems {
+    display: block;
+  }
+
+  .dropdown-styling {
+    width: 100%;
+    height:  80px;
+  }
+
+  .larger-br-elems {
+    display: none;
+  }
+
+}
+
+
+
+/* Animations */
+
+@keyframes switch-units-scale-up-anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes switch-units-scale-down-anim {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes switch-units-scale-up-down-anim {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes switch-units-colour-focus-anim {
+  from {
+    background-color: #D9D9D9;
+    color: #000;
+  }
+  to {
+    background-color: blue;
+    color: #fff;
+    
+  }
+}
+
+@keyframes switch-units-colour-unfocus-anim {
+  from {
+    background-color: blue;
+    color: #fff;
+  }
+  to {
+    background-color: #d9d9d9;
+    color: #000;
+    
+  }
+}
+
+@keyframes switch-units-rotate-forward-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes switch-units-rotate-backward-anim {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* @keyframes switch-units-font-anim {
+  from {
+    font-size: 32px;
+  }
+
+  to {
+    font-size: 32px;
+  }
+} */
