@@ -1,11 +1,11 @@
 import { Col } from "react-bootstrap";
 import { useState, useRef, useEffect } from "react";
 
-const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue}) => {
+const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue }) => {
     
-    const [optionValue, setOptionValue] = useState(options[0]);
-  
-    let catgNum = 0;
+  const [optionValue, setOptionValue] = useState(options[0]);
+
+  let catgNum = 0;
 
 
 
@@ -27,7 +27,7 @@ const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, from
     }
 
 
- 
+
 
     return (
       <div className="unit-details-div">
@@ -50,19 +50,19 @@ const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, from
                 <div style={{display: "flex", justifyContent: "center"}}>
 
                
-                <select value={optionValue} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
-                    
+                  <select defaultValue={options[0]} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
+
                     {
-                    options.map((currentOption) => {
+                      options.map((currentOption) => {
                         catgNum++;
                         return (
                           <option value={currentOption} key={`${categoryValue}-${catgNum}`}>
                             {currentOption}
                           </option>
                         );
-                    })
-                  }
-                      
+                      })
+                    }
+
                 </select>
               
                 
