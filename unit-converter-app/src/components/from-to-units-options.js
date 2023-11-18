@@ -6,15 +6,28 @@ import { useState, useEffect } from "react";
 
 const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
 
-    const [fromUnitDetails, setFromUnitDetails] = useState('');
-    const [toUnitDetails, setToUnitDetails] = useState('');
+    const [fromUnitDetails, setFromUnitDetails] = useState(currentUnits[0]);
+    const [toUnitDetails, setToUnitDetails] = useState(currentUnits[0]);
     const [currentValue, setCurrentValue] = useState(''); 
     const [calculatedValue, setCalculatedValue] = useState('')
+    const [previousCategoryValue, setPreviousCategoryValue] = useState(categoryValue);
+    console.log(currentUnits[0]);
     console.log("Details:", fromUnitDetails, toUnitDetails, currentValue);
 
     useEffect(() => {
-        return converter(fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue);
+
+        
+    
+        if (previousCategoryValue !== categoryValue) {
+            setPreviousCategoryValue(categoryValue);
+            setFromUnitDetails(currentUnits[0]);
+            setToUnitDetails(currentUnits[0]);
+        }
+        
+        converter(fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue);
     })
+    
+    
 
 
     return (
@@ -27,6 +40,7 @@ const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
                 fromUnitDetails={currentUnits[0]}
                 toUnitDetails={currentUnits[0]}
                 setCurrentValue={setCurrentValue}
+                categoryValue={categoryValue}
             />
             <br></br><br></br>
             <SwapDetailsButton />
@@ -37,6 +51,7 @@ const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
                 setToUnitDetails={setToUnitDetails}
                 currentValue={calculatedValue}
                 calculatedValue={calculatedValue}
+                categoryValue={categoryValue}
             />
         </div>
     )

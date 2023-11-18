@@ -15,7 +15,7 @@ const App = () => {
 
   const [checked, setChecked] = useState(false);
   const [categoryValue, setCategoryValue] = useState('Temperature');
-  const [currentUnits, setCurrentUnits] = useState(['Celsius', 'Farenheit', 'Kelvin', 'Rankine', 'Réaumur', 'Newton', 'Rømer', 'Delisle', 'Leiden', 'Wedgwood', 'Gas mark']);
+  const [currentUnits, setCurrentUnits] = useState(['Celsius', 'Farenheit', 'Kelvin']);
   
 
 
@@ -28,7 +28,6 @@ const App = () => {
    
     <br></br>
     <UnitCategoryOptions
-
       categoryValue={categoryValue}
       setCategoryValue={setCategoryValue}
       currentUnits={currentUnits}

@@ -58,22 +58,22 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
 
       }
 
+      const UnitConverterOptions =  options.map((option, idx) => (
+        <UnitOption option={option} />
+            ))
+
 
 
     return (
         <div  style={{backgroundColor: '#D9D9D9', overflowX: "scroll", display: "flex", flexDirection: "row"}}>
-    
-            {options.map((option, idx) => (
-                <UnitOption option={option} />
-
-            ))}
+            
+        {UnitConverterOptions}
 
         </div>
     )
 
 
 };
-
 
 
 export default UnitCategoryOptions;

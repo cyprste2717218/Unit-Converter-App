@@ -1,26 +1,33 @@
 import { Col } from "react-bootstrap";
 import { useState, useRef, useEffect } from "react";
 
-const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue}) => {
+const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue}) => {
     
-    useEffect(() => {
-      const firstOptionValue = document.querySelector('#select-element').firstChild.value;
-      //setCurrentValue(firstOptionValue);
-    }, [])
+    const [optionValue, setOptionValue] = useState(options[0]);
+  
+    let catgNum = 0;
+
+
 
     const handleCurrentValueChange = (e) => {
       setCurrentValue(e.target.value);
     }
    
     const handleSelectChange = (e) => {
-      
+
       if (title === 'From') {
+        setOptionValue(e.target.value);
         setFromUnitDetails(e.target.value);
+
       } else if (title === 'To') {
+        setOptionValue(e.target.value);
         setToUnitDetails(e.target.value);
       }
       
     }
+
+
+ 
 
     return (
       <div className="unit-details-div">
@@ -43,11 +50,19 @@ const UnitDetails = ({title, options, setFromUnitDetails, setToUnitDetails, from
                 <div style={{display: "flex", justifyContent: "center"}}>
 
                
-                <select id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
+                <select value={optionValue} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
+                    
                     {
-                    options.map(currentOption => 
-                        <option>{currentOption}</option>
-                    )}   
+                    options.map((currentOption) => {
+                        catgNum++;
+                        return (
+                          <option value={currentOption} key={`${categoryValue}-${catgNum}`}>
+                            {currentOption}
+                          </option>
+                        );
+                    })
+                  }
+                      
                 </select>
               
                 

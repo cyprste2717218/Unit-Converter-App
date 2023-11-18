@@ -14,12 +14,12 @@ const Footer = () => {
                     </Col>
                     <Col xs={4} lg={3} style={{padding: "10px",  marginTop: "auto", marginBottom: "auto", color: "#000"}} >
                         <div style={{display: "flex", fontSize: "34px", justifyContent: 'flex-end', columnGap: '10px', padding: "5px"}}>
-                        <a target="_blank" href='https://github.com/cyprste2717218'>
-                            <FontAwesomeIcon size='xl' icon={faGithub} />
-                        </a>
-                        <a target="_blank" href='https://www.linkedin.com/in/stephen-ingham-/'>
-                            <FontAwesomeIcon size='xl' icon={faLinkedin} />
-                        </a>
+                            <a style={{color: "#000"}} target="_blank" href='https://github.com/cyprste2717218'>
+                                <FontAwesomeIcon size='xl' icon={faGithub} />
+                            </a>
+                            <a  style={{color: "#000"}} target="_blank" href='https://www.linkedin.com/in/stephen-ingham-/'>
+                                <FontAwesomeIcon size='xl' icon={faLinkedin} />
+                            </a>
                         </div>
               
                     </Col>
