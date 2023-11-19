@@ -17,8 +17,10 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
             <Col className='unit-option' onClick={() => 
                 handleClick(option)}
                 xs={4} sm={2} md={2} lg={1}  style={{
-                backgroundColor: option.name === categoryValue ? '#005ec2' : '#fff',
-                color: option.name === categoryValue ? '#fff' : '#000'}}>
+                    backgroundColor: option.name === categoryValue ? '#496ABF' : '#fff',
+                    color: option.name === categoryValue ? '#fff' : '#000',
+                    border: option.name === categoryValue ? "1px solid #496ABF" : "1px solid #000"
+                }}>
                 <FontAwesomeIcon icon={option.icon} size='lg' style={{fontSize: '30px', marginBottom: '10px'}} />
                 {option.name}
             </Col>  
