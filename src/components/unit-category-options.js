@@ -48,7 +48,7 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
         'Temperature': ['Celsius', 'Farenheit', 'Kelvin'],
         'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Nautical Mile','Nanometre'],
         'Area': ['Square Metre', 'Square Kilometer', 'Square Inch', 'Square Foot', 'Square Yard', 'Square Mile', 'Acre', 'Hectare'],
-        'Weight': ['Miligram', 'Gram', 'Kilogram', 'Tonne', 'Ounce', 'Pound', 'Stone', 'Short Ton', 'Metric Ton'],
+          'Weight': ['Tonne', 'Kilogram', 'Gram', 'Miligram', 'Microgram', 'Imperial Ton', 'US Ton', 'Stone', 'Pound', 'Ounce'],
         'Volume': ['Cubic Meter', 'Cubic Centimeter', 'Cubic Millimeter', 'Cubic Inch', 'Cubic Foot', 'Cubic Yard', 'Milliliter', 'Liter', 'Kiloliter', 'Dal', 'Peck', 'Gallon', 'Barrel', 'Hogshead', 'Butt', 'Tun'],
         'Currency': ['United States Dollar (USD)', 'Euro (EUR)', 'Japanese Yen (JPY)', 'British Pound (GBP)', 'Australian Dollar (AUD)', 'Canadian Dollar (CAD)', 'Swiss Franc (CHF)', 'Chinese Yuan Renminbi (CNY)', 'Indian Rupee (INR)', 'Brazilian Real (BRL)', 'Russian Ruble (RUB)', 'Mexican Peso (MXN)'],
         'Time': ['Nanosecond (ns)', 'Microsecond (µs)', 'Millisecond (ms)', 'Second (s)', 'Minute (min)', 'Hour (h)', 'Day (d)', 'Week (wk)', 'Month (mo)', 'Year (yr)', 'Decade', 'Century', 'Millennium'],

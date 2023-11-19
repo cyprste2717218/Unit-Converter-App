@@ -66,7 +66,7 @@ const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fro
                 </select>
 
 
-                {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" />)}
+                {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" min={"0"} />)}
               </div>
             </span>
           </div>
