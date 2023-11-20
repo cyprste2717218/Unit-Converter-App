@@ -29,7 +29,7 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
                 "Meter": `${currentValue}`,
                 "Kilometer": `${currentValue}/1000`,
                 "Centimeter": `${currentValue}*100`,
-                "Milimeter": `${currentValue}*1000`,
+                "Millimeter": `${currentValue}*1000`,
                 "Inch": `${currentValue}*39.37`,
                 "Foot": `${currentValue}*3.281`,
                 "Yard": `${currentValue}*1.094`,
