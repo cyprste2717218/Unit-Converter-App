@@ -353,10 +353,48 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
                 "Miligram": `${currentValue}*28350`,
             }
         },
-        "Volume": {},
+        "Volume": {
+
+        },
         "Currency": {},
         "Time": {},
-        "Speed": {},
+        "Speed": {
+            'Mile per hour': {
+                'Mile per hour': `${currentValue}`,
+                'Foot per second': `${currentValue}*1.467`,
+                'Meter per second': `${currentValue}/2.237`,
+                'Kilometer per hour': `${currentValue}*1.609`,
+                'Knot': `${currentValue}/1.151`
+            },
+            'Foot per second ': {
+                'Mile per hour': `${currentValue}/1.467`,
+                'Foot per second': `${currentValue}`,
+                'Meter per second': `${currentValue}/3.281`,
+                'Kilometer per hour': `${currentValue}*1.097`,
+                'Knot': `${currentValue}/1.688`
+            },
+            'Meter per second': {
+                'Mile per hour': `${currentValue}*2.237`,
+                'Foot per second': `${currentValue}*3.281`,
+                'Meter per second': `${currentValue}`,
+                'Kilometer per hour': `${currentValue}*3.6`,
+                'Knot': `${currentValue}*1.944`
+            },
+            'Kilometer per hour': {
+                'Mile per hour': `${currentValue}/1.609`,
+                'Foot per second': `${currentValue}/1.097`,
+                'Meter per second': `${currentValue}/3.6`,
+                'Kilometer per hour': `${currentValue}`,
+                'Knot': `${currentValue}/1.852`
+            },
+            'Knot': {
+                'Mile per hour': `${currentValue}*1.151`,
+                'Foot per second': `${currentValue}*1.688`,
+                'Meter per second': `${currentValue}/1.944`,
+                'Kilometer per hour': `${currentValue}*1.852`,
+                'Knot': `${currentValue}`
+            }
+        },
         "Power": {},
         "Angle": {},
         "Data": {},

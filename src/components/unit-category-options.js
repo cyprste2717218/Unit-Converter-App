@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartArea, faClock, faFlask, faGaugeHigh, faRulerCombined, faSterlingSign, faTemperatureHalf, faWeightHanging, faBolt, faAngleRight, faServer, faGasPump } from '@fortawesome/free-solid-svg-icons';
+import { faChartArea, faClock, faFlask, faGaugeHigh, faRulerCombined, faWeightScale, faTemperatureHalf, faWeightHanging, faBolt, faAngleRight, faServer, faGasPump } from '@fortawesome/free-solid-svg-icons';
 
 const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits}) => {
 
@@ -31,9 +31,9 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
         { name: 'Temperature', value: 1, icon: faTemperatureHalf },
         { name: 'Length', value: 2, icon: faRulerCombined },
         { name: 'Area', value: 3, icon: faChartArea },
-        { name: 'Weight', value: 4, icon: faWeightHanging },
+        { name: 'Weight', value: 4, icon: faWeightScale },
         { name: 'Volume', value: 5, icon: faFlask },
-        { name: 'Currency', value: 6, icon: faSterlingSign },
+        { name: 'Pressure', value: 6, icon: faWeightHanging },
         { name: 'Time', value: 7, icon: faClock },
         { name: 'Speed', value: 8, icon: faGaugeHigh },
         { name: 'Power', value: 9, icon: faBolt },
@@ -49,14 +49,14 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
         'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Nautical Mile','Nanometre'],
         'Area': ['Square Metre', 'Square Kilometer', 'Square Inch', 'Square Foot', 'Square Yard', 'Square Mile', 'Acre', 'Hectare'],
           'Weight': ['Tonne', 'Kilogram', 'Gram', 'Miligram', 'Microgram', 'Imperial Ton', 'US Ton', 'Stone', 'Pound', 'Ounce'],
-        'Volume': ['Cubic Meter', 'Cubic Centimeter', 'Cubic Millimeter', 'Cubic Inch', 'Cubic Foot', 'Cubic Yard', 'Milliliter', 'Liter', 'Kiloliter', 'Dal', 'Peck', 'Gallon', 'Barrel', 'Hogshead', 'Butt', 'Tun'],
-        'Currency': ['United States Dollar (USD)', 'Euro (EUR)', 'Japanese Yen (JPY)', 'British Pound (GBP)', 'Australian Dollar (AUD)', 'Canadian Dollar (CAD)', 'Swiss Franc (CHF)', 'Chinese Yuan Renminbi (CNY)', 'Indian Rupee (INR)', 'Brazilian Real (BRL)', 'Russian Ruble (RUB)', 'Mexican Peso (MXN)'],
-        'Time': ['Nanosecond (ns)', 'Microsecond (µs)', 'Millisecond (ms)', 'Second (s)', 'Minute (min)', 'Hour (h)', 'Day (d)', 'Week (wk)', 'Month (mo)', 'Year (yr)', 'Decade', 'Century', 'Millennium'],
-        'Speed': ['Meters per Second (m/s)', 'Kilometers per Hour (km/h)', 'Miles per Hour (mph)', 'Feet per Second (fps)', 'Knots', 'Mach'],
-        'Power': ['Watts (W)', 'Kilowatts (kW)', 'Megawatts (MW)', 'Gigawatts (GW)', 'Terawatts (TW)', 'Petawatts (PW)', 'Exawatts (EW)', 'Zettawatt (ZW)', 'Yottawatts (YW)'],
-        'Angle': ['Degree (°)','Minute (′)', 'Second (″)', 'Radian (rad)', 'Gradian (grad)', 'Turn (t)', 'Revolution (rev)'],
-        'Data': ['Bit', 'Byte', 'Kilobyte (KB)', 'Megabyte (MB)', 'Gigabyte (GB)', 'Terabyte (TB)', 'Petabyte (PB)', 'Exabyte (EB)', 'Zettabyte (ZB)', 'Yottabyte (YB)'],
-        'Fuel': ['Gallon (gal)', 'Barrel (bbl)', 'Cubic Meter (m³)', 'Liter (L)', 'Kiloliter (KL)', 'Ton (t)', 'British Thermal Unit (BTU)', 'Joule (J)', 'Therm (thm)', 'Megawatt-hour (MWh)', 'Gigawatt-hour (GWh)', 'Terawatt-hour (TWh)', 'Petawatt-hour (PWh)']
+          'Volume': ['US liquid gallon', 'US liquid quart', 'US liquid pint', 'US legal cup', 'Fluid ounce', 'US tablespoon', 'US teaspoon', 'Cubic meter', 'Liter', 'Milliliter', 'Imperial gallon', 'Imperial quart', 'Imperial pint', 'Imperial cup', 'Imp. fluid ounce', 'Imperial tablespoon', 'Imperial teaspoon', 'Cubic foot', 'Cubic inch'],
+          'Pressure': ['Bar', 'Pascal', 'Pound per square inch', 'Standard atmosphere', 'Torr'],
+          'Time': ['Nanosecond', 'Microsecond', 'Millisecond', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Calendar year', 'Decade', 'Century'],
+          'Speed': ['Mile per hour', 'Foot per second', 'Meter per second', 'Kilometer per hour', 'Knot'],
+          'Power': ['Joule', 'Kilojoule', 'Gram calorie', 'Kilocalorie', 'Watt hour', 'Kilowatt hour', 'Electronvolt', 'British thermal unit', 'US therm', 'Foot-pound'],
+          'Angle': ['Arcsecond', 'Degree', 'Gradian', 'Milliradian', 'Minute of arc', 'Radian'],
+          'Data': ['Bit', 'Kilobit', 'Kibibit', 'Megabit', 'Mebibit', 'Gigabit', 'Gibibit', 'Terabit', 'Tebibit', 'Petabit', 'Pebibit', 'Byte', 'Kilobyte', 'Kibibyte', 'Megabyte', 'Mebibyte', 'Gigabyte', 'Gibibyte', 'Terabyte', 'Tebibyte', 'Petabyte', 'Pebibyte'],
+          'Fuel': ['Miles per gallon', 'Miles per gallon (Imperial)', 'Kilometer per liter', 'Liter per 100 kilometers']
 
       }
 
