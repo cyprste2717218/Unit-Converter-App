@@ -356,7 +356,7 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
         "Volume": {
 
         },
-        "Currency": {},
+        "Pressure": {},
         "Time": {},
         "Speed": {
             'Mile per hour': {
