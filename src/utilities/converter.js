@@ -2,7 +2,9 @@
 
 const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue) => {
     
-  
+    const calculateResult = () => {
+
+    }
 
     const conversions = {
 
@@ -354,11 +356,407 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
             }
         },
         "Volume": {
-
+            'US liquid gallon': {
+                'US liquid gallon': `${currentValue}`,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'US liquid quart': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'US liquid pint': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'US legal cup': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Fluid ounce': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'US tablespoon': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'US teaspoon': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Cubic meter': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Liter': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Milliliter': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial gallon': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial quart': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial pint': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial cup': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imp. fluid ounce': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial tablespoon': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Imperial teaspoon': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Cubic foot': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            },
+            'Cubic inch': {
+                'US liquid gallon': ``,
+                'US liquid quart': ``,
+                'US liquid pint': ``,
+                'US legal cup': ``,
+                'Fluid ounce': ``,
+                'US tablespoon': ``,
+                'US teaspoon': ``,
+                'Cubic meter': ``,
+                'Liter': ``,
+                'Milliliter': ``,
+                'Imperial gallon': ``,
+                'Imperial quart': ``,
+                'Imperial pint': ``,
+                'Imperial cup': ``,
+                'Imp. fluid ounce': ``,
+                'Imperial tablespoon': ``,
+                'Imperial teaspoon': ``,
+                'Cubic foot': ``,
+                'Cubic inch': ``
+            }
         },
         "Pressure": {},
-
-      
         "Time": {},
         "Speed": {
             'Mile per hour': {
@@ -398,25 +796,83 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
             }
         },
         "Power": {},
-        "Angle": {},
+        "Angle": {
+            'Arcsecond': {
+                'Arcsecond': `${currentValue}`,
+                'Degree': `${currentValue}/3600`,
+                'Gradian': `${currentValue}/3240`,
+                'Milliradian': `${currentValue}*(1000*${Math.PI}/(180*3600))`,
+                'Minute of arc': `${currentValue}/60`,
+                'Radian': `${currentValue}*(${Math.PI}/(180*3600))`
+            },
+            'Degree': {
+                'Arcsecond': `${currentValue}*3600`,
+                'Degree': `${currentValue}`,
+                'Gradian': `${currentValue}*(200/180)`,
+                'Milliradian': `${currentValue}*((1000*${Math.PI})/180)`,
+                'Minute of arc': `${currentValue}*60`,
+                'Radian': `${currentValue}*(${Math.PI}/180)`
+            },
+            'Gradian': {
+                'Arcsecond': `${currentValue}*3240`,
+                'Degree': `${currentValue}*(180/200)`,
+                'Gradian': `${currentValue}`,
+                'Milliradian': `${currentValue}*((1000*${Math.PI})/200)`,
+                'Minute of arc': `${currentValue}*54`,
+                'Radian': `${currentValue}*(${Math.PI}/200)`
+            },
+            'Milliradian': {
+                'Arcsecond': `${currentValue} * ((3600*180)/(1000*${Math.PI}))`,
+                'Degree': `${currentValue} * (180/(1000*${Math.PI}))`,
+                'Gradian': `${currentValue}* (200/(1000*${Math.PI}))`,
+                'Milliradian': `${currentValue}`,
+                'Minute of arc': `${currentValue}*((60*180)/(1000*${Math.PI}))`,
+                'Radian': `${currentValue}/1000`
+            },
+            'Minute of arc': {
+                'Arcsecond': `${currentValue}*60`,
+                'Degree': `${currentValue}/60`,
+                'Gradian': `${currentValue}/54`,
+                'Milliradian': `${currentValue}* ((1000*${Math.PI})/(60*180))`,
+                'Minute of arc': `${currentValue}`,
+                'Radian': `${currentValue} * ((${Math.PI})/(60*180))`
+            },
+            'Radian': {
+                'Arcsecond': `${currentValue}* ((3600*180)/${Math.PI})`,
+                'Degree': `${currentValue} * (180/${Math.PI})`,
+                'Gradian': `${currentValue} * (200/${Math.PI})`,
+                'Milliradian': `${currentValue}/1000`,
+                'Minute of arc': `${currentValue} * ((60*180)/${Math.PI})`,
+                'Radian': `${currentValue}`
+            }
+        },
         "Data": {},
         "Fuel": {}
       
     }
 
-    if ((fromUnitDetails === '') && (toUnitDetails === '') && (categoryValue === '')) {
+    const negativeCategories = ['Temperature', 'Angle']
+
+    if ((fromUnitDetails !== '') && (toUnitDetails !== '') && (categoryValue !== '')) {
+        console.log("currentValue:", currentValue)
+        if (((currentValue < 0) && ((categoryValue === negativeCategories[0]) || (categoryValue === negativeCategories[1]))) || (currentValue >= 0)) {
+            if ((fromUnitDetails in conversions[categoryValue])) {
+                if (currentValue !== '') {
+                    const result = eval(conversions[categoryValue][fromUnitDetails][toUnitDetails]);
+                    const roundedResult = Math.round((result + Number.EPSILON) * 10000) / 10000;
+                    setCalculatedValue(roundedResult);
+                    console.log("Result:", roundedResult);
+                }
+
+            }
+
+        }
+
 
     }
-    else {  
-    
-        if ((fromUnitDetails in conversions[categoryValue])) {
-            if (currentValue !== '') {
-                const result = eval(conversions[categoryValue][fromUnitDetails][toUnitDetails]);
-                setCalculatedValue(result);
-                console.log("Result:", result);
-            }
-            
-        }
+    else {
+
+
   
    
   
