@@ -755,8 +755,6 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
             }
         },
         "Pressure": {},
-
-      
         "Time": {},
         "Speed": {
             'Mile per hour': {
@@ -859,8 +857,9 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
         if ((fromUnitDetails in conversions[categoryValue])) {
             if (currentValue !== '') {
                 const result = eval(conversions[categoryValue][fromUnitDetails][toUnitDetails]);
-                setCalculatedValue(result);
-                console.log("Result:", result);
+                const roundedResult = Math.round((result + Number.EPSILON) * 10000) / 10000;
+                setCalculatedValue(roundedResult);
+                console.log("Result:", roundedResult);
             }
             
         }
