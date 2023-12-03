@@ -2,7 +2,9 @@
 
 const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue) => {
     
-  
+    const calculateResult = () => {
+
+    }
 
     const conversions = {
 
@@ -849,20 +851,28 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
       
     }
 
-    if ((fromUnitDetails === '') && (toUnitDetails === '') && (categoryValue === '')) {
+    const negativeCategories = ['Temperature', 'Angle']
+
+    if ((fromUnitDetails !== '') && (toUnitDetails !== '') && (categoryValue !== '')) {
+        console.log("currentValue:", currentValue)
+        if (((currentValue < 0) && ((categoryValue === negativeCategories[0]) || (categoryValue === negativeCategories[1]))) || (currentValue >= 0)) {
+            if ((fromUnitDetails in conversions[categoryValue])) {
+                if (currentValue !== '') {
+                    const result = eval(conversions[categoryValue][fromUnitDetails][toUnitDetails]);
+                    const roundedResult = Math.round((result + Number.EPSILON) * 10000) / 10000;
+                    setCalculatedValue(roundedResult);
+                    console.log("Result:", roundedResult);
+                }
+
+            }
+
+        }
+
 
     }
-    else {  
-    
-        if ((fromUnitDetails in conversions[categoryValue])) {
-            if (currentValue !== '') {
-                const result = eval(conversions[categoryValue][fromUnitDetails][toUnitDetails]);
-                const roundedResult = Math.round((result + Number.EPSILON) * 10000) / 10000;
-                setCalculatedValue(roundedResult);
-                console.log("Result:", roundedResult);
-            }
-            
-        }
+    else {
+
+
   
    
   

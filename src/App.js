@@ -33,7 +33,7 @@ const App = () => {
     }
     converter(fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue);
 
-    console.log("CategoryValue")
+
 
   })
 

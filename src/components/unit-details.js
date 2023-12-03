@@ -15,14 +15,20 @@ const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fro
 
   const handleSelectChange = (e) => {
 
+    const newValue = e.target.value;
+
+
     if (title === 'From') {
-      setOptionValue(e.target.value);
-      setFromUnitDetails(e.target.value);
+      setOptionValue(newValue);
+      setFromUnitDetails(newValue);
 
     } else if (title === 'To') {
-      setOptionValue(e.target.value);
-      setToUnitDetails(e.target.value);
+      setOptionValue(newValue);
+      setToUnitDetails(newValue);
     }
+
+
+
 
   }
 
@@ -66,7 +72,7 @@ const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fro
                 </select>
 
 
-                {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" min={"0"} />)}
+                {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
               </div>
             </span>
           </div>
