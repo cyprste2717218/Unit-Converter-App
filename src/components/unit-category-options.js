@@ -53,7 +53,7 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
           'Time': ['Nanosecond (ns)', 'Microsecond (µs)', 'Millisecond (ms)', 'Second (s)', 'Minute (min)', 'Hour (h)', 'Day (d)', 'Week (wk)', 'Month (mo)', 'Year (yr)', 'Decade', 'Century', 'Millennium'],
           'Speed': ['Meters per Second (m/s)', 'Kilometers per Hour (km/h)', 'Miles per Hour (mph)', 'Feet per Second (fps)', 'Knots', 'Mach'],
           'Power': ['Watts (W)', 'Kilowatts (kW)', 'Megawatts (MW)', 'Gigawatts (GW)', 'Terawatts (TW)', 'Petawatts (PW)', 'Exawatts (EW)', 'Zettawatt (ZW)', 'Yottawatts (YW)'],
-          'Angle': ['Degree (°)', 'Minute (′)', 'Second (″)', 'Radian (rad)', 'Gradian (grad)', 'Turn (t)', 'Revolution (rev)'],
+          'Angle': ['Arcsecond', 'Degree', 'Gradian', 'Milliradian', 'Minute of arc', 'Radian'],
           'Data': ['Bit', 'Byte', 'Kilobyte (KB)', 'Megabyte (MB)', 'Gigabyte (GB)', 'Terabyte (TB)', 'Petabyte (PB)', 'Exabyte (EB)', 'Zettabyte (ZB)', 'Yottabyte (YB)'],
           'Fuel': ['Gallon (gal)', 'Barrel (bbl)', 'Cubic Meter (m³)', 'Liter (L)', 'Kiloliter (KL)', 'Ton (t)', 'British Thermal Unit (BTU)', 'Joule (J)', 'Therm (thm)', 'Megawatt-hour (MWh)', 'Gigawatt-hour (GWh)', 'Terawatt-hour (TWh)', 'Petawatt-hour (PWh)']
 

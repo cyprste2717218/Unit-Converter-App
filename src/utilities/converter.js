@@ -796,7 +796,56 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
             }
         },
         "Power": {},
-        "Angle": {},
+        "Angle": {
+            'Arcsecond': {
+                'Arcsecond': `${currentValue}`,
+                'Degree': `${currentValue}/3600`,
+                'Gradian': `${currentValue}/3240`,
+                'Milliradian': `${currentValue}*(1000*${Math.PI}/(180*3600))`,
+                'Minute of arc': `${currentValue}/60`,
+                'Radian': `${currentValue}*(${Math.PI}/(180*3600))`
+            },
+            'Degree': {
+                'Arcsecond': `${currentValue}*3600`,
+                'Degree': `${currentValue}`,
+                'Gradian': `${currentValue}*(200/180)`,
+                'Milliradian': `${currentValue}*((1000*${Math.PI})/180)`,
+                'Minute of arc': `${currentValue}*60`,
+                'Radian': `${currentValue}*(${Math.PI}/180)`
+            },
+            'Gradian': {
+                'Arcsecond': `${currentValue}*3240`,
+                'Degree': `${currentValue}*(180/200)`,
+                'Gradian': `${currentValue}`,
+                'Milliradian': `${currentValue}*((1000*${Math.PI})/200)`,
+                'Minute of arc': `${currentValue}*54`,
+                'Radian': `${currentValue}*(${Math.PI}/200)`
+            },
+            'Milliradian': {
+                'Arcsecond': `${currentValue} * ((3600*180)/(1000*${Math.PI}))`,
+                'Degree': `${currentValue} * (180/(1000*${Math.PI}))`,
+                'Gradian': `${currentValue}* (200/(1000*${Math.PI}))`,
+                'Milliradian': `${currentValue}`,
+                'Minute of arc': `${currentValue}*((60*180)/(1000*${Math.PI}))`,
+                'Radian': `${currentValue}/1000`
+            },
+            'Minute of arc': {
+                'Arcsecond': `${currentValue}*60`,
+                'Degree': `${currentValue}/60`,
+                'Gradian': `${currentValue}/54`,
+                'Milliradian': `${currentValue}* ((1000*${Math.PI})/(60*180))`,
+                'Minute of arc': `${currentValue}`,
+                'Radian': `${currentValue} * ((${Math.PI})/(60*180))`
+            },
+            'Radian': {
+                'Arcsecond': `${currentValue}* ((3600*180)/${Math.PI})`,
+                'Degree': `${currentValue} * (180/${Math.PI})`,
+                'Gradian': `${currentValue} * (200/${Math.PI})`,
+                'Milliradian': `${currentValue}/1000`,
+                'Minute of arc': `${currentValue} * ((60*180)/${Math.PI})`,
+                'Radian': `${currentValue}`
+            }
+        },
         "Data": {},
         "Fuel": {}
       
