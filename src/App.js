@@ -44,8 +44,11 @@ const App = () => {
   return (
     
     <>
+      <div style={{ height: "100vh" }}>
+
+
     <UnitConvNavbar />
-    <div style={{minHeight: "88vh"}}>
+        <div >
 
    
     <br></br>
@@ -85,6 +88,7 @@ const App = () => {
     </div>
     <Footer />
     
+      </div>
     </>
     
   );

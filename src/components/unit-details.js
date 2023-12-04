@@ -47,7 +47,7 @@ const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fro
               {title}
             </div>
           </div>
-          <br></br><br></br><br></br>
+          <br></br><br></br>
           <div className="larger-br-elems">
             <br></br><br></br>
           </div>
@@ -78,7 +78,7 @@ const UnitDetails = ({ title, options, setFromUnitDetails, setToUnitDetails, fro
           </div>
           <br></br><br></br>
           <div className="mobile-br-elems">
-            <br></br><br></br>
+
           </div>
           <div className="larger-br-elems">
             <br></br><br></br><br></br><br></br>

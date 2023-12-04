@@ -44,7 +44,7 @@ const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
             />
             <br></br><br></br>
             {/* <SwapDetailsButton /> */}
-            <br></br><br></br>
+
             <UnitDetails
                 title={'To'}
                 options={currentUnits}
