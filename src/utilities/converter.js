@@ -766,7 +766,7 @@ const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedVa
                 'Kilometer per hour': `${currentValue}*1.609`,
                 'Knot': `${currentValue}/1.151`
             },
-            'Foot per second ': {
+            'Foot per second': {
                 'Mile per hour': `${currentValue}/1.467`,
                 'Foot per second': `${currentValue}`,
                 'Meter per second': `${currentValue}/3.281`,
