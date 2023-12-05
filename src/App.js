@@ -9,6 +9,7 @@ import UnitCategoryOptions from './components/unit-category-options';
 import FromToUnitsOptions from './components/from-to-units-options';
 import Footer from './components/footer';
 import UnitConvNavbar from './components/unit-conv-navbar';
+
 import converter from './utilities/converter';
 
 
@@ -44,8 +45,11 @@ const App = () => {
   return (
     
     <>
+      <div style={{ height: "100vh" }}>
+
+
     <UnitConvNavbar />
-    <div style={{minHeight: "88vh"}}>
+        <div >
 
    
     <br></br>
@@ -85,6 +89,7 @@ const App = () => {
     </div>
     <Footer />
     
+      </div>
     </>
     
   );

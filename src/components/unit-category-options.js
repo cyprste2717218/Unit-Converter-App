@@ -45,13 +45,13 @@ const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits})
     
       const units = {
         'Temperature': ['Celsius', 'Farenheit', 'Kelvin'],
-        'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Nautical Mile','Nanometre'],
+          'Length': ['Meter', 'Kilometer', 'Centimeter', 'Millimeter', 'Inch', 'Foot', 'Yard', 'Mile', 'Nanometre', 'Nautical Mile'],
         'Area': ['Square Metre', 'Square Kilometer', 'Square Inch', 'Square Foot', 'Square Yard', 'Square Mile', 'Acre', 'Hectare'],
-          'Weight': ['Miligram', 'Gram', 'Kilogram', 'Tonne', 'Ounce', 'Pound', 'Stone', 'Short Ton', 'Metric Ton'],
+          'Weight': ['Miligram', 'Gram', 'Kilogram', 'Tonne', 'Ounce', 'Pound', 'Stone', 'US Ton', 'Imperial Ton'],
           'Volume': ['Cubic Meter', 'Cubic Centimeter', 'Cubic Millimeter', 'Cubic Inch', 'Cubic Foot', 'Cubic Yard', 'Milliliter', 'Liter', 'Kiloliter', 'Dal', 'Peck', 'Gallon', 'Barrel', 'Hogshead', 'Butt', 'Tun'],
           'Currency': ['United States Dollar (USD)', 'Euro (EUR)', 'Japanese Yen (JPY)', 'British Pound (GBP)', 'Australian Dollar (AUD)', 'Canadian Dollar (CAD)', 'Swiss Franc (CHF)', 'Chinese Yuan Renminbi (CNY)', 'Indian Rupee (INR)', 'Brazilian Real (BRL)', 'Russian Ruble (RUB)', 'Mexican Peso (MXN)'],
           'Time': ['Nanosecond (ns)', 'Microsecond (µs)', 'Millisecond (ms)', 'Second (s)', 'Minute (min)', 'Hour (h)', 'Day (d)', 'Week (wk)', 'Month (mo)', 'Year (yr)', 'Decade', 'Century', 'Millennium'],
-          'Speed': ['Meters per Second (m/s)', 'Kilometers per Hour (km/h)', 'Miles per Hour (mph)', 'Feet per Second (fps)', 'Knots', 'Mach'],
+          'Speed': ['Meter per second', 'Kilometer per hour', 'Mile per hour', 'Foot per second', 'Knot'],
           'Power': ['Watts (W)', 'Kilowatts (kW)', 'Megawatts (MW)', 'Gigawatts (GW)', 'Terawatts (TW)', 'Petawatts (PW)', 'Exawatts (EW)', 'Zettawatt (ZW)', 'Yottawatts (YW)'],
           'Angle': ['Arcsecond', 'Degree', 'Gradian', 'Milliradian', 'Minute of arc', 'Radian'],
           'Data': ['Bit', 'Byte', 'Kilobyte (KB)', 'Megabyte (MB)', 'Gigabyte (GB)', 'Terabyte (TB)', 'Petabyte (PB)', 'Exabyte (EB)', 'Zettabyte (ZB)', 'Yottabyte (YB)'],
