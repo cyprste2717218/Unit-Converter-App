@@ -1,10 +1,11 @@
-import UnitDetails from "./unit-details";
+import UnitDetailsLarge from "./unit-details-large";
+import UnitDetailsSmall from "./unit-details-small";
 import SwapDetailsButton from "./swap-details-button";
 import converter from "../utilities/converter";
 import { Container, Row } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
-const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
+const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, sectionHeightLarge }) => {
 
     const [fromUnitDetails, setFromUnitDetails] = useState(currentUnits[0]);
     const [toUnitDetails, setToUnitDetails] = useState(currentUnits[0]);
@@ -32,7 +33,9 @@ const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
 
     return (
         <div className="from-to-unit-options" >
-            <UnitDetails
+
+
+            <UnitDetailsLarge
                 title={'From'}
                 options={currentUnits}
                 setFromUnitDetails={setFromUnitDetails}
@@ -41,18 +44,45 @@ const FromToUnitsOptions = ({currentUnits, categoryValue}) => {
                 toUnitDetails={currentUnits[0]}
                 setCurrentValue={setCurrentValue}
                 categoryValue={categoryValue}
+                sectionHeightLarge={sectionHeightLarge}
             />
-            <br></br><br></br>
+
             {/* <SwapDetailsButton /> */}
 
-            <UnitDetails
+            <UnitDetailsLarge
                 title={'To'}
                 options={currentUnits}
                 setToUnitDetails={setToUnitDetails}
                 currentValue={calculatedValue}
                 calculatedValue={calculatedValue}
                 categoryValue={categoryValue}
+                sectionHeightLarge={sectionHeightLarge}
             />
+
+
+            <UnitDetailsSmall
+                title={'From'}
+                options={currentUnits}
+                setFromUnitDetails={setFromUnitDetails}
+                result={() => converter(fromUnitDetails, toUnitDetails)}
+                fromUnitDetails={currentUnits[0]}
+                toUnitDetails={currentUnits[0]}
+                setCurrentValue={setCurrentValue}
+                categoryValue={categoryValue}
+                sectionHeightSmall={sectionHeightSmall}
+            />
+            <UnitDetailsSmall
+                title={'To'}
+                options={currentUnits}
+                setToUnitDetails={setToUnitDetails}
+                currentValue={calculatedValue}
+                calculatedValue={calculatedValue}
+                categoryValue={categoryValue}
+                sectionHeightSmall={sectionHeightSmall}
+
+            />
+
+
         </div>
     )
 }
