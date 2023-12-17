@@ -9,7 +9,7 @@ import UnitCategoryOptions from './components/unit-category-options';
 import FromToUnitsOptions from './components/from-to-units-options';
 import Footer from './components/footer';
 import UnitConvNavbar from './components/unit-conv-navbar';
-import ResultDisplay from './components/resultDisplay';
+
 import converter from './utilities/converter';
 
 
