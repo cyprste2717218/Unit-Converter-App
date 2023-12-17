@@ -48,7 +48,7 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
                         <span className="unit-details-span">
                             <div style={{ display: "flex", justifyContent: "center" }}>
 
-                                {(title === 'To' ? <input readOnly value={calculatedValue}  ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
+                                {(title === 'To' ? <input readOnly value={calculatedValue}  ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" inputMode="numeric" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
                                 <select defaultValue={options[0]} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
 
                                     {
