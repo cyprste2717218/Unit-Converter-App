@@ -1,3 +1,12 @@
+.burger-icon {
+  color: #fff;
+}
+
+.burger-icon:hover {
+  color: #000;
+}
+
+
 .footer-nav-link {
   color: #fff;
 }
@@ -280,15 +289,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .icon-large-devices {
 
-    display: none;
-  }
-
-  .icon-small-devices {
-    display: block;
-
-  }
 .from-section-styles {
     background-color: #fff;
   }
