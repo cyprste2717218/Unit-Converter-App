@@ -37,58 +37,55 @@ const App = () => {
 
 
   })
-
-
+  const sectionHeight = "calc(100vh - 225px)";;
+  const sectionHeightSmall = "calc(100vh - 225px)";
+  const sectionHeightLarge = "calc(100vh - 455px)";
   
 
 
   return (
     
     <>
-      <div style={{ height: "100vh" }}>
+      <div style={{ fontFamily: 'Montserrat' }}>
+        <UnitConvNavbar />
+        <div className='this' style={{ height: sectionHeight }} >
 
 
-    <UnitConvNavbar />
-        <div >
+          <UnitCategoryOptions
+            setCategoryValue={setCategoryValue}
+            categoryValue={categoryValue}
+            setCurrentUnits={setCurrentUnits}
+            currentUnits={currentUnits}
+            setCalculatedValue={setCalculatedValue}
+            calculatedValue={calculatedValue}
+            setCurrentValue={setCurrentValue}
+            currentValue={currentValue}
 
-   
-    <br></br>
-        <UnitCategoryOptions
-          setCategoryValue={setCategoryValue}
-          categoryValue={categoryValue}
-          setCurrentUnits={setCurrentUnits}
-          currentUnits={currentUnits}
-          setCalculatedValue={setCalculatedValue}
-          calculatedValue={calculatedValue}
-          setCurrentValue={setCurrentValue}
-          currentValue={currentValue}
+          />
 
-    />
-    
-    <br></br><br></br>
-    <FromToUnitsOptions
 
-      currentUnits={currentUnits}
-      categoryValue={categoryValue}
-          setFromUnitDetails={setFromUnitDetails}
-          setToUnitDetails={setToUnitDetails}
-          fromUnitDetails={fromUnitDetails}
-          toUnitDetails={toUnitDetails}
-          setCurrentValue={setCurrentValue}
-          currentValue={currentValue}
-          setCalculatedValue={setCalculatedValue}
-          calculatedValue={calculatedValue}
-          previousCategoryValue={previousCategoryValue}
-          setPreviousCategoryValue={setPreviousCategoryValue}
-    />
-    
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    </div>
-    <Footer />
-    
+          <FromToUnitsOptions
+
+            currentUnits={currentUnits}
+            categoryValue={categoryValue}
+            setFromUnitDetails={setFromUnitDetails}
+            setToUnitDetails={setToUnitDetails}
+            fromUnitDetails={fromUnitDetails}
+            toUnitDetails={toUnitDetails}
+            setCurrentValue={setCurrentValue}
+            currentValue={currentValue}
+            setCalculatedValue={setCalculatedValue}
+            calculatedValue={calculatedValue}
+            previousCategoryValue={previousCategoryValue}
+            setPreviousCategoryValue={setPreviousCategoryValue}
+            sectionHeightSmall={sectionHeightSmall}
+            sectionHeightLarge={sectionHeightLarge}
+          />
+
+
+        </div>
+        <Footer />
+
       </div>
     </>
     
