@@ -43,7 +43,7 @@ const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails
       <div className={`unit-details-large-div ${relevantSectionBgColor} ${relevantSectionDetails}` } style={{ height: `${sectionHeightLarge}`}}>
         <div style={{display: "flex", justifyContent: "center", width: "100%"}}>
             
-            <div style={{ flexDirection: "column", height: `calc(${sectionHeightLarge}*0.4)`, marginTop: `calc(${sectionHeightLarge}*0.3)`}} className={`d-flex justify-content-center ${relevantForegroundSection}`} >
+            <div style={{ flexDirection: "column", height: `calc(${sectionHeightLarge}*0.6)`, marginTop: `calc(${sectionHeightLarge}*0.2)`}} className={`d-flex justify-content-center ${relevantForegroundSection}`} >
               
               <br></br>
               <div className={` ${relevantHeaderTitleBoxStyles}`}>
