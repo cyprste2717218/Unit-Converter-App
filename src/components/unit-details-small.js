@@ -41,7 +41,7 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
 
 
 
-                    <br></br><br></br><br></br> <br></br><br></br><br></br><br></br>   
+                    <br></br><br></br><br></br> <br></br>  
                     {title}:
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                         <span className="unit-details-span">
