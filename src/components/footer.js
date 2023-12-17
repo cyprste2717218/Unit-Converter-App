@@ -9,7 +9,7 @@ const Footer = () => {
                 <span style={{display: "flex", flexDirection: "row"}}>
                     <Col xs={8} lg={9} style={{fontSize: "20px", padding: "20px"}}>
                         <div style={{marginTop: "auto", marginBottom: "auto"}}>
-                        <p>Developed by <a id='github-text-link' target="_blank" href="https://github.com/cyprste2717218">@cyprste2717218</a></p>
+                        <p>Developed by <a id='github-text-link-large' target="_blank" href="https://github.com/cyprste2717218">@cyprste2717218</a></p>
                         </div>
                     </Col>
                     <Col xs={4} lg={3} style={{padding: "10px",  marginTop: "auto", marginBottom: "auto", color: "#000"}} >

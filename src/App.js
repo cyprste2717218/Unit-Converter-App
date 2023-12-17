@@ -1,5 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -11,6 +13,7 @@ import Footer from './components/footer';
 import UnitConvNavbar from './components/unit-conv-navbar';
 
 import converter from './utilities/converter';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const App = () => {
@@ -23,7 +26,10 @@ const App = () => {
   const [currentValue, setCurrentValue] = useState('');
   const [calculatedValue, setCalculatedValue] = useState('');
   const [previousCategoryValue, setPreviousCategoryValue] = useState(categoryValue);
-
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     if (previousCategoryValue !== categoryValue) {
@@ -47,7 +53,34 @@ const App = () => {
     
     <>
       <div style={{ fontFamily: 'Montserrat' }}>
-        <UnitConvNavbar />
+        <Offcanvas show={show} onHide={handleClose} style={{fontFamily: 'Montserrat', color: '#000'}}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title><b>About: </b> </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body >
+            <b>Developed by Stephen Ingham (<a id='github-text-link-small' target="_blank" href="https://github.com/cyprste2717218">@cyprste2717218</a>)</b>
+            <br></br><br></br>
+            <ul>
+              <li style={{marginBottom: "10px"}}>
+                <a id='github-text-list-link-small' target="_blank" href="https://github.com/cyprste2717218">
+                  <FontAwesomeIcon size='xl' icon={faGithub} style={{marginRight: "5px", color: "#08a126"}} />
+                  Github Link
+                </a>
+              </li>
+              <li>
+                <a id='linkedin-text-list-link-small' target="_blank" href="https://www.linkedin.com/in/stephen-ingham-/">
+                <FontAwesomeIcon size='xl' icon={faLinkedin} style={{marginRight: "5px", color: "#08a126"}} />
+                Linkedin Link
+                </a>
+              </li>
+            </ul>
+          
+          </Offcanvas.Body>
+        </Offcanvas>
+
+        <UnitConvNavbar
+          handleShow={handleShow}
+        />
         <div className='this' style={{ height: sectionHeight }} >
 
 

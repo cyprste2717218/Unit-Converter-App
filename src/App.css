@@ -57,13 +57,27 @@
   
 }
   
-#github-text-link {
+#github-text-link-large {
   color: #fff;
 }
 
-#github-text-link:hover {
+#github-text-link-large:hover {
   color: #000;
 }
+
+#github-text-link-small {
+  color: #000;
+}
+
+#github-text-list-link-small {
+  color: #000;
+}
+
+#linkedin-text-list-link-small {
+  color: #000;
+}
+
+
                                                                                                                   
 .unit-category-options {
   background-color: #D9D9D9;
@@ -85,7 +99,15 @@
 }
 
 @media screen and (min-width: 1024px)  {
+  .icon-large-devices {
 
+    display: block;
+  }
+
+  .icon-small-devices {
+    display: none;
+
+  }
   .from-convert-div-box-large {
     background-color: #03c10c;
     box-shadow: 2px 2px 2px 2px #0000002e;
@@ -222,6 +244,7 @@
   .navbar-text {
     font-size: 45px;
     color: #FFFFFF !important;
+  
   }
 
   .from-to-unit-options {
@@ -257,7 +280,15 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .icon-large-devices {
 
+    display: none;
+  }
+
+  .icon-small-devices {
+    display: block;
+
+  }
 .from-section-styles {
     background-color: #fff;
   }
