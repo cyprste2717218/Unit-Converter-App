@@ -13,9 +13,13 @@ const CopyValueButton = ({outputValue}) => {
         const queryOpts = { name: "clipboard-write", allowWithoutGesture: false};
        
         if (navigator.clipboard) {
+            console.log("navigator has clipboard");
+
             navigator.permissions.query(queryOpts).then((result) => {
+                console.log("resolved to some result object:", result);
                 if (result.state === "granted" || result.state === "prompt") {
                 // writing output value to clipboard (primary way for most browsers)
+                  console.log("result state either granted or prompt");
                   navigator.clipboard.writeText(outputValue).then(
                     () => {
                         console.log("Copy to clipboard successful!");
@@ -31,10 +35,16 @@ const CopyValueButton = ({outputValue}) => {
                   ).catch((err) => {
                     console.log("Error:", err)
                   });
+                } else {
+                    console.log("result.state is not granted or prompt");
                 }
+
               });
+                
     
         } else {
+            console.log("no navigator.clipboard found");
+
             // writing output value to clipboard (fallback method for older/other browsers)
             document.execCommand('copy', true, outputValue);
 
