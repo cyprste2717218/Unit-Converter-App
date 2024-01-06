@@ -1,6 +1,6 @@
 {
   "short_name": "Unit Converter App",
-  "name": "Unit Converter web app built with React",
+  "name": "Unit Converter web app built with React and deployed with Vercel",
   "icons": [
     {
       "src": "gauge-high-solid.ico",
