@@ -1,3 +1,4 @@
+
 import UnitDetailsLarge from "./unit-details-large";
 import UnitDetailsSmall from "./unit-details-small";
 import SwapDetailsButton from "./swap-details-button";
@@ -29,8 +30,6 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
     })
     
     
-
-
     return (
         <div className="from-to-unit-options" >
 
@@ -43,6 +42,7 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
                 fromUnitDetails={currentUnits[0]}
                 toUnitDetails={currentUnits[0]}
                 setCurrentValue={setCurrentValue}
+                currentValue={currentValue}
                 categoryValue={categoryValue}
                 sectionHeightLarge={sectionHeightLarge}
             />
@@ -68,6 +68,7 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
                 fromUnitDetails={currentUnits[0]}
                 toUnitDetails={currentUnits[0]}
                 setCurrentValue={setCurrentValue}
+                currentValue={currentValue}
                 categoryValue={categoryValue}
                 sectionHeightSmall={sectionHeightSmall}
             />
@@ -86,5 +87,6 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
         </div>
     )
 }
+
 
 export default FromToUnitsOptions;

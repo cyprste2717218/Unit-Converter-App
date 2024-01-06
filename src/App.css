@@ -2,6 +2,11 @@
   color: #fff;
 }
 
+.copy-icon:hover {
+  color: blue;
+}
+
+
 .burger-icon:hover {
   color: #000;
 }
@@ -85,9 +90,7 @@
 #linkedin-text-list-link-small {
   color: #000;
 }
-
-
-                                                                                                                  
+                                                                                                                
 .unit-category-options {
   background-color: #D9D9D9;
   overflow-x: scroll;
@@ -243,7 +246,7 @@
   
   .navbar-div {
     background-color: #08a126;
-    height: 150px;
+    height: 120px;
     font-size: 1px;
    box-shadow: 0 3px 2px #00000045;
     margin-bottom: 5px;

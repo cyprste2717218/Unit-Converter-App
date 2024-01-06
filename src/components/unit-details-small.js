@@ -1,8 +1,9 @@
 import { Col } from "react-bootstrap";
 import { useState, useRef, useEffect } from "react";
+import CopyValueButton from "./copy-value-button";
 
 
-const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightSmall }) => {
+const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightSmall, currentValue }) => {
 
     const [optionValue, setOptionValue] = useState(options[0]);
 
@@ -43,11 +44,24 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
 
 
                     <br></br><br></br>
-                    {title}:
+                    <span style={{display: "flex"}}>
+                        <Col xs={4} sm={6} style={{display: "flex", justifyContent: "left"}} >
+                            {title}:
+                        </Col>
+                        <Col xs={8} sm={6} style={{display: "flex", justifyContent: "right"}}>
+                            <CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)}  />
+                  
+                        </Col>
+                    
+                       
+                           
+                        
+                    </span>
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                   
                         <span className="unit-details-span">
                             <div style={{ display: "flex", justifyContent: "center" }}>
-
+                           
                                 {(title === 'To' ? <input readOnly value={calculatedValue}  ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
                                 <select defaultValue={options[0]} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
 
@@ -77,11 +91,5 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
     )
 
 }
-
-
-
-
-
-
 
 export default UnitDetailsSmall;

@@ -45,7 +45,8 @@ const App = () => {
   })
   const sectionHeight = "calc(100vh - 225px)";;
   const sectionHeightSmall = "calc(100vh - 225px)";
-  const sectionHeightLarge = "calc(100vh - 255px)";
+  const sectionHeightLarge = "calc(100vh - 205px)";
+
   
 
 

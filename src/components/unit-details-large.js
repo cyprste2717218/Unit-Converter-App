@@ -1,7 +1,9 @@
+
 import { Col } from "react-bootstrap";
 import { useState, useRef, useEffect } from "react";
+import CopyValueButton from "./copy-value-button";
 
-const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightLarge }) => {
+const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightLarge, currentValue }) => {
 
   const [optionValue, setOptionValue] = useState(options[0]);
 
@@ -36,7 +38,7 @@ const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails
   const relevantHeaderTitleBoxStyles = (title === 'From') ? "from-div-title-box-large" : "to-div-title-box-large";
   const relevantForegroundSection = (title === 'From') ? "from-convert-div-box-large" : "to-convert-div-box-large";
   const separatorStyles = (title === 'From') ? "from-title-separator-large" : "to-title-separator-large";
-
+  const copyIconColour = (title === 'From') ? "#fff" : "#000";
   return (
     <>
 
@@ -54,13 +56,17 @@ const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails
               </div>
               <TitleSep separatorStyles={separatorStyles} />
               <br></br><br></br>
+              <div style={{height: "25px", color: `${copyIconColour}` }}>
+                <CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)} />  
+              </div>
+                
               <div className="larger-br-elems">
                 <br></br><br></br>
               </div>
-              <div>
+              
+              <div>  
                 <span className="unit-details-span">
                   <div style={{ display: "flex", justifyContent: "center" }}>
-
                     {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" inputMode="numeric" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
                   
                     <select defaultValue={options[0]} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
@@ -100,6 +106,5 @@ const TitleSep = ({separatorStyles}) => {
     </div>
   )
 }
-
 
 export default UnitDetailsLarge;
