@@ -34,22 +34,13 @@ const CopyValueButton = ({outputValue}) => {
         })
         .catch((err) => {
             console.log("Error", err);
-        });
-            
-
-      
-
-          
-
-    
-
-        
+        }); 
     }
 
     return (
         <> 
             <span style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                {copyButtonTextDisplayed && <div style={{position: "fixed", right: "80px"}}>Value Copied!</div>}
+                {copyButtonTextDisplayed && <div style={{position: "relative"}}>Value Copied!</div>}
                 <FontAwesomeIcon className="copy-icon" icon={faCopy} onClick={onCopy} size="lg" />        
             </span>
            
