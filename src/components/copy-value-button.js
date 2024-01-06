@@ -10,25 +10,36 @@ const CopyValueButton = ({outputValue}) => {
     const onCopy = () => {
 
         // checking if device granted access to copy to clipboard
-        navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
-            if (result.state === "granted" || result.state === "prompt") {
-            // writing output value to clipboard
-              navigator.clipboard.writeText(outputValue).then(
-                () => {
-                    console.log("Copy to clipboard successful!");
-                    setCopyButtonTextDisplayed(true);
+        const queryOpts = { name: "clipboard-write", allowWithoutGesture: false};
+       
+        if (navigator.clipboard) {
+            navigator.permissions.query(queryOpts).then((result) => {
+                if (result.state === "granted" || result.state === "prompt") {
+                // writing output value to clipboard (primary way for most browsers)
+                  navigator.clipboard.writeText(outputValue).then(
+                    () => {
+                        console.log("Copy to clipboard successful!");
+                        setCopyButtonTextDisplayed(true);
+    
+                        setTimeout(() => {
+                            setCopyButtonTextDisplayed(false);
+                        }, 3000)
+                    },
+                    () => {
+                        console.log("Copy to clipboard not succesful");
+                    },
+                  ).catch((err) => {
+                    console.log("Error:", err)
+                  });
+                }
+              });
+    
+        } else {
+            // writing output value to clipboard (fallback method for older/other browsers)
+            document.execCommand('copy', true, outputValue);
 
-                    setTimeout(() => {
-                        setCopyButtonTextDisplayed(false);
-                    }, 3000)
-                },
-                () => {
-                    console.log("Copy to clipboard not succesful");
-                },
-              );
-            }
-          });
-
+        }
+    
 
         
     }
