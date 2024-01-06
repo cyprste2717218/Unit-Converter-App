@@ -1,3 +1,4 @@
+
 import UnitDetailsLarge from "./unit-details-large";
 import UnitDetailsSmall from "./unit-details-small";
 import SwapDetailsButton from "./swap-details-button";
@@ -29,8 +30,6 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
     })
     
     
-
-
     return (
         <div className="from-to-unit-options" >
 
@@ -88,5 +87,6 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
         </div>
     )
 }
+
 
 export default FromToUnitsOptions;

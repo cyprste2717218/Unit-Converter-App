@@ -1,5 +1,5 @@
 # Unit Converter App
 
-![Screenshot of Unit Converter App](https://media.licdn.com/dms/image/D4E2DAQHWCkC5V319vg/profile-treasury-image-shrink_800_800/0/1700360140676?e=1701046800&v=beta&t=ITx7T-rNJADWiNgvd_W0-43fc3JOCpPJGh1aKmo1Yyk)
+![Screenshot of unit converter app on tablet view](https://repository-images.githubusercontent.com/580565507/7e1c8fab-894c-4e1b-8bf7-e56a3b4feae1)
 This is a simple Unit Converter web app I have implemented in React which can easily be used to convert between unit categories.
 Deployed with vercel.

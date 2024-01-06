@@ -76,6 +76,20 @@
 
 #github-text-link-large:hover {
   color: #000;
+
+#github-text-link-small {
+  color: #000;
+}
+
+#github-text-list-link-small {
+  color: #000;
+}
+
+#linkedin-text-list-link-small {
+  color: #000;
+}
+
+=======
 }
 
 #github-text-link-small {
@@ -89,6 +103,7 @@
 #linkedin-text-list-link-small {
   color: #000;
 }
+
 
 
                                                                                                                   
@@ -248,6 +263,7 @@
   .navbar-div {
     background-color: #08a126;
     height: 120px;
+
     font-size: 1px;
    box-shadow: 0 3px 2px #00000045;
     margin-bottom: 5px;

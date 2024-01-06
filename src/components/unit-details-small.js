@@ -92,10 +92,4 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
 
 }
 
-
-
-
-
-
-
 export default UnitDetailsSmall;

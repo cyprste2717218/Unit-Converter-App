@@ -1,3 +1,4 @@
+
 import { Col } from "react-bootstrap";
 import { useState, useRef, useEffect } from "react";
 import CopyValueButton from "./copy-value-button";
@@ -105,6 +106,5 @@ const TitleSep = ({separatorStyles}) => {
     </div>
   )
 }
-
 
 export default UnitDetailsLarge;
