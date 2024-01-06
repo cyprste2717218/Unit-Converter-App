@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { Col } from "react-bootstrap";
 
 const CopyValueButton = ({outputValue}) => {
 
@@ -40,9 +41,13 @@ const CopyValueButton = ({outputValue}) => {
     return (
         <> 
             <span style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                {copyButtonTextDisplayed && <div style={{position: "relative"}}>Value Copied!</div>}
-                <FontAwesomeIcon className="copy-icon" icon={faCopy} onClick={onCopy} size="lg" />        
-            </span>
+                <Col xs={11} sm={11}>
+                    {copyButtonTextDisplayed && <div style={{position: "relative"}}>Value Copied!</div>}
+                </Col>
+                <Col xs={1} sm={1}>
+                    <FontAwesomeIcon className="copy-icon" icon={faCopy} onClick={onCopy} size="lg" />        
+                </Col>
+           </span>
            
         </>
     )

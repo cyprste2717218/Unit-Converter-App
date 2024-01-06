@@ -45,11 +45,11 @@ const UnitDetailsSmall = ({ title, options, setFromUnitDetails, setToUnitDetails
 
                     <br></br><br></br>
                     <span style={{display: "flex"}}>
-                        <Col xs={11} >
+                        <Col xs={4} sm={6} style={{display: "flex", justifyContent: "left"}} >
                             {title}:
                         </Col>
-                        <Col xs={1} sm={1}>
-                        <CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)}  />
+                        <Col xs={8} sm={6} style={{display: "flex", justifyContent: "right"}}>
+                            <CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)}  />
                   
                         </Col>
                     
