@@ -31,7 +31,7 @@ const CopyValueButton = ({outputValue}) => {
 
             setTimeout(() => {
                 setCopyButtonTextDisplayed(false);
-            }, 3000)
+            }, 1000)
         })
         .catch((err) => {
             console.log("Error", err);
@@ -41,12 +41,14 @@ const CopyValueButton = ({outputValue}) => {
     return (
         <> 
             <span style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <Col xs={11} sm={11}>
+
+                <Col xs={11} sm={11} md={11} style={{display: "flex", justifyContent: "right"}}>
                     {copyButtonTextDisplayed && <div style={{position: "relative"}}>Value Copied!</div>}
                 </Col>
-                <Col xs={1} sm={1}>
-                    <FontAwesomeIcon className="copy-icon" icon={faCopy} onClick={onCopy} size="lg" />        
+                <Col xs={1} sm={1} md={1} style={{display: "flex", justifyContent: "left", marginLeft: "10px"}}>
+                    <FontAwesomeIcon className="copy-icon" icon={faCopy} onClick={onCopy} size="xl" />        
                 </Col>
+        
            </span>
            
         </>
