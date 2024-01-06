@@ -68,6 +68,7 @@ const FromToUnitsOptions = ({ currentUnits, categoryValue, sectionHeightSmall, s
                 fromUnitDetails={currentUnits[0]}
                 toUnitDetails={currentUnits[0]}
                 setCurrentValue={setCurrentValue}
+                currentValue={currentValue}
                 categoryValue={categoryValue}
                 sectionHeightSmall={sectionHeightSmall}
             />
