@@ -1,10 +1,6 @@
-const FavouritesBarLarge = () => {
-    
-    return (
-        <>
-        </>
-    )
-
-}
+const FavouritesBarLarge = () => (
+	<>
+	</>
+);
 
 export default FavouritesBarLarge;

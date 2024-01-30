@@ -1,112 +1,104 @@
 
-import { Col } from "react-bootstrap";
-import { useState, useRef, useEffect, ChangeEvent } from "react";
-import CopyValueButton from "./copy-value-button";
-import { UnitDetailsType } from "../types/unitDetailsType";
+import {Col} from 'react-bootstrap';
+import {useState, useRef, useEffect, type ChangeEvent} from 'react';
+import {type UnitDetailsType} from '../types/unitDetailsType';
+import CopyValueButton from './copy-value-button';
 
+const UnitDetailsLarge = ({title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightLarge, currentValue}: UnitDetailsType): JSX.Element => {
+	const [optionValue, setOptionValue] = useState(options[0]);
 
-const UnitDetailsLarge = ({ title, options, setFromUnitDetails, setToUnitDetails, fromUnitDetails, toUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightLarge, currentValue }: UnitDetailsType): JSX.Element => {
+	const handleCurrentValueChange = (error: ChangeEvent<HTMLInputElement>) => {
+		setCurrentValue(error.target.value);
+	};
 
-  const [optionValue, setOptionValue] = useState(options[0]);
+	const handleSelectChange = (error: ChangeEvent<HTMLSelectElement>) => {
+		const newValue = error.target.value;
 
-  const handleCurrentValueChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setCurrentValue(e.target.value);
-  }
+		if (title === 'From') {
+			setOptionValue(newValue);
+			setFromUnitDetails(newValue);
+		} else if (title === 'To') {
+			setOptionValue(newValue);
+			setToUnitDetails(newValue);
+		}
+	};
 
-  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+	/* Defining relevant classes to be applied to elements via placeholder variables */
 
-    const newValue = e.target.value;
+	let catgNumber = 0;
+	const relevantSectionDetails = (title === 'From') ? 'from-section-large' : 'to-section-large';
+	const relevantSectionBgColor = (title === 'From') ? 'from-section-bg-large' : 'to-section-bg-large';
+	const relevantHeaderTitleBoxStyles = (title === 'From') ? 'from-div-title-box-large' : 'to-div-title-box-large';
+	const relevantForegroundSection = (title === 'From') ? 'from-convert-div-box-large' : 'to-convert-div-box-large';
+	const separatorStyles = (title === 'From') ? 'from-title-separator-large' : 'to-title-separator-large';
+	const copyIconColour = (title === 'From') ? '#fff' : '#000';
+	return (
+		<>
 
+			<div className={`unit-details-large-div ${relevantSectionBgColor} ${relevantSectionDetails}` } style={{height: `${sectionHeightLarge}`}}>
+				<div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
 
-    if (title === 'From') {
-      setOptionValue(newValue);
-      setFromUnitDetails(newValue);
+					<div style={{flexDirection: 'column', height: `calc(${sectionHeightLarge}*0.6)`, marginTop: `calc(${sectionHeightLarge}*0.2)`}} className={`d-flex justify-content-center ${relevantForegroundSection}`} >
 
-    } else if (title === 'To') {
-      setOptionValue(newValue);
-      setToUnitDetails(newValue);
-    }
+						<br></br>
+						<div className={` ${relevantHeaderTitleBoxStyles}`}>
+							<div style={{display: 'flex', justifyContent: 'center'}}>
+								{title}:
+							</div>
 
+						</div>
+						<TitleSep separatorStyles={separatorStyles} />
+						<br></br><br></br>
+						<div style={{height: '25px', color: `${copyIconColour}`}}>
+							<CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)} />
+						</div>
 
+						<div className='larger-br-elems'>
+							<br></br><br></br>
+						</div>
 
+						<div>
+							<span className='unit-details-span'>
+								<div style={{display: 'flex', justifyContent: 'center'}}>
+									{(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={e => {
+										handleCurrentValueChange(e);
+									}} type='number' inputMode='numeric' min={categoryValue === 'Temperature' || categoryValue === 'Angle' ? '' : '0'} />)}
 
-  }
+									<select defaultValue={options[0]} id='select-element' onChange={e => {
+										handleSelectChange(e);
+									}} className='dropdown-styling' >
 
-  /* Defining relevant classes to be applied to elements via placeholder variables */
+										{
+											options.map((currentOption: string) => {
+												catgNumber++;
+												return (
+													<option value={currentOption} key={`${categoryValue}-${catgNumber}`}>
+														{currentOption}
+													</option>
+												);
+											})
+										}
 
-  let catgNum = 0;
-  const relevantSectionDetails = (title === 'From') ? "from-section-large" : "to-section-large";
-  const relevantSectionBgColor = (title === 'From') ? "from-section-bg-large" : "to-section-bg-large"
-  const relevantHeaderTitleBoxStyles = (title === 'From') ? "from-div-title-box-large" : "to-div-title-box-large";
-  const relevantForegroundSection = (title === 'From') ? "from-convert-div-box-large" : "to-convert-div-box-large";
-  const separatorStyles = (title === 'From') ? "from-title-separator-large" : "to-title-separator-large";
-  const copyIconColour = (title === 'From') ? "#fff" : "#000";
-  return (
-    <>
+									</select>
 
-      <div className={`unit-details-large-div ${relevantSectionBgColor} ${relevantSectionDetails}` } style={{ height: `${sectionHeightLarge}`}}>
-        <div style={{display: "flex", justifyContent: "center", width: "100%"}}>
-            
-            <div style={{ flexDirection: "column", height: `calc(${sectionHeightLarge}*0.6)`, marginTop: `calc(${sectionHeightLarge}*0.2)`}} className={`d-flex justify-content-center ${relevantForegroundSection}`} >
-              
-              <br></br>
-              <div className={` ${relevantHeaderTitleBoxStyles}`}>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  {title}:
-                </div>
-              
-              </div>
-              <TitleSep separatorStyles={separatorStyles} />
-              <br></br><br></br>
-              <div style={{height: "25px", color: `${copyIconColour}` }}>
-                <CopyValueButton outputValue={(title === 'From' ? currentValue : calculatedValue)} />  
-              </div>
-                
-              <div className="larger-br-elems">
-                <br></br><br></br>
-              </div>
-              
-              <div>  
-                <span className="unit-details-span">
-                  <div style={{ display: "flex", justifyContent: "center" }}>
-                    {(title === 'To' ? <input readOnly value={calculatedValue} ></input> : <input onChange={(e) => handleCurrentValueChange(e)} type="number" inputMode="numeric" min={categoryValue === "Temperature" || categoryValue === "Angle" ? "" : "0"} />)}
-                  
-                    <select defaultValue={options[0]} id='select-element' onChange={(e) => handleSelectChange(e)} className='dropdown-styling' >
+								</div>
+							</span>
+						</div>
+						<br></br><br></br>
 
-                      {
-                        options.map((currentOption: string) => {
-                          catgNum++;
-                          return (
-                            <option value={currentOption} key={`${categoryValue}-${catgNum}`}>
-                              {currentOption}
-                            </option>
-                          );
-                        })
-                      }
+					</div>
 
-                    </select>
-                  
-                  </div>
-                </span>
-              </div>
-              <br></br><br></br>
-        
-      
-            </div>
-        
-        </div>
-      </div>
+				</div>
+			</div>
 
-    </>
-  )
-}
+		</>
+	);
+};
 
-const TitleSep = ({separatorStyles}: {separatorStyles: "from-title-separator-large" | "to-title-separator-large"}) => {
-  return (
-    <div style={{display: "flex", justifyContent: "center"}}>
-      <div className={`${separatorStyles}`} style={{width: "80%", height: "1px"}}></div>
-    </div>
-  )
-}
+const TitleSep = ({separatorStyles}: {separatorStyles: 'from-title-separator-large' | 'to-title-separator-large'}) => (
+	<div style={{display: 'flex', justifyContent: 'center'}}>
+		<div className={`${separatorStyles}`} style={{width: '80%', height: '1px'}}></div>
+	</div>
+);
 
 export default UnitDetailsLarge;
