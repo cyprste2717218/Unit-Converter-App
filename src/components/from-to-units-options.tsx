@@ -3,8 +3,10 @@ import {Container, Row} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
 import converter from '../utilities/converter';
 import {type FromToUnitsOptionsInputsType} from '../types/fromToUnitsOptionsInputs';
-import UnitDetailsLarge from './unit-details-large';
-import UnitDetailsSmall from './unit-details-small';
+import UnitDetailsLargeFrom from './unit-details-large-from';
+import UnitDetailsLargeTo from './unit-details-large-to';
+import UnitDetailsSmallFrom from './unit-details-small-from';
+import UnitDetailsSmallTo from './unit-details-small-to';
 import SwapDetailsButton from './swap-details-button';
 
 const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, sectionHeightLarge}: FromToUnitsOptionsInputsType): JSX.Element => {
@@ -29,14 +31,15 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 	return (
 		<div className='from-to-unit-options' >
 
-			<UnitDetailsLarge
+			<UnitDetailsLargeFrom
+				type={'From'}
 				title={'From'}
 				options={currentUnits}
 				setFromUnitDetails={setFromUnitDetails}
+				fromUnitDetails={currentUnits[0]}
 				result={() => {
 					converter(fromUnitDetails, toUnitDetails);
 				}}
-				fromUnitDetails={currentUnits[0]}
 				toUnitDetails={currentUnits[0]}
 				setCurrentValue={setCurrentValue}
 				currentValue={currentValue}
@@ -46,7 +49,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 
 			{/* <SwapDetailsButton /> */}
 
-			<UnitDetailsLarge
+			<UnitDetailsLargeTo
+				type={'To'}
 				title={'To'}
 				options={currentUnits}
 				setToUnitDetails={setToUnitDetails}
@@ -56,7 +60,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				sectionHeightLarge={sectionHeightLarge}
 			/>
 
-			<UnitDetailsSmall
+			<UnitDetailsSmallFrom
+				type={'From'}
 				title={'From'}
 				options={currentUnits}
 				setFromUnitDetails={setFromUnitDetails}
@@ -70,7 +75,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				categoryValue={categoryValue}
 				sectionHeightSmall={sectionHeightSmall}
 			/>
-			<UnitDetailsSmall
+			<UnitDetailsSmallTo
+				type={'To'}
 				title={'To'}
 				options={currentUnits}
 				setToUnitDetails={setToUnitDetails}

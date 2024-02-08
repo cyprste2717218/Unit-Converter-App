@@ -3,7 +3,7 @@
     "xo.format.enable": true,
     "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     "xo.validate": [
         "typescriptreact"
