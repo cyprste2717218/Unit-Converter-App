@@ -91,8 +91,8 @@ const App = () => {
 						currentValue={currentValue}
 
 					/>
-					<div style={{display: 'flex', justifyContent: 'center'}}>
-						<FavouritesBarSmall></FavouritesBarSmall>
+					<div style={{display: 'flex', justifyContent: 'left'}}>
+						<FavouritesBarSmall />
 					</div>
 
 					<FromToUnitsOptions

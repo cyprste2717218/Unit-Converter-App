@@ -21,7 +21,7 @@ const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 	let catgNumber = 0;
 
 	return (
-		<div className={'unit-details-small-div from-section-styles'} style={{height: `calc(${sectionHeightSmall} / 2)`}}>
+		<div className={'unit-details-small-div from-section-styles'} style={{height: `calc(${sectionHeightSmall} / 2.5)`}}>
 			<Col xs={8} sm={6} md={7} lg={8}>
 
 				<div style={{flexDirection: 'column'}} className='d-flex justify-content-center unit-details-small-div' >
