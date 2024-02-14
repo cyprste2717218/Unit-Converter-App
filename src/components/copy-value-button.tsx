@@ -42,7 +42,7 @@ const CopyValueButton = ({outputValue}: {outputValue: string}): JSX.Element => {
 				<Col xs={1} sm={1} md={1} style={{display: 'flex', justifyContent: 'left', marginLeft: '10px'}}>
 					<FontAwesomeIcon className='copy-icon' icon={faCopy} onClick={onCopy} size='xl' />
 				</Col>
-				<Col xs={6} sm={6} md={6} style={{display: 'flex', justifyContent: 'left'}}>
+				<Col xs={6} sm={6} md={6} style={{display: 'flex', justifyContent: 'left', width: '100%', marginTop: '5px'}}>
 					{copyButtonTextDisplayed && <div style={{position: 'absolute'}}>Value Copied!</div>}
 				</Col>
 

@@ -20,8 +20,7 @@ const UnitDetailsLargeTo = ({options, setToUnitDetails, setCurrentValue, calcula
 	/* Defining relevant classes to be applied to elements via placeholder variables */
 
 	let catgNumber = 0;
-	const separatorStyles = 'to-title-separator-large';
-	const copyIconColour = '#000';
+
 	return (
 		<>
 
@@ -39,8 +38,11 @@ const UnitDetailsLargeTo = ({options, setToUnitDetails, setCurrentValue, calcula
 						</div>
 						<TitleSep separatorStyles={'to-title-separator-large'} />
 						<br></br><br></br>
-						<div style={{height: '25px', color: '#000'}}>
-							<CopyValueButton outputValue={calculatedValue} />
+						<div style={{display: 'flex', flexDirection: 'row', height: '25px', color: '#000', justifyContent: 'right', columnGap: '12px', paddingRight: '85px'}}>
+
+							<div style={{marginTop: '5px'}}>
+								<CopyValueButton outputValue={calculatedValue} />
+							</div>
 						</div>
 
 						<div className='larger-br-elems'>

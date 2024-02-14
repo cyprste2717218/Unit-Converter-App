@@ -2,6 +2,7 @@
 import {useState, type ChangeEvent} from 'react';
 import {type UnitFromLargeType} from '../types/unitDetailsType';
 import CopyValueButton from './copy-value-button';
+import FavouriteConversionButton from './favourite-conversion-button';
 
 const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightLarge, currentValue}: UnitFromLargeType): JSX.Element => {
 	const [optionValue, setOptionValue] = useState(options[0]);
@@ -37,8 +38,12 @@ const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						</div>
 						<TitleSep separatorStyles={'from-title-separator-large'} />
 						<br></br><br></br>
-						<div style={{height: '25px', color: '#fff'}}>
-							<CopyValueButton outputValue={ currentValue } />
+						<div style={{display: 'flex', flexDirection: 'row', height: '25px', color: '#fff', justifyContent: 'right', paddingRight: '85px', columnGap: '12px'}}>
+							<FavouriteConversionButton />
+							<div style={{marginTop: '5px'}}>
+								<CopyValueButton outputValue={ currentValue } />
+							</div>
+
 						</div>
 
 						<div className='larger-br-elems'>
