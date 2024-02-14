@@ -33,7 +33,7 @@ const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						</Col>
 						<Col style={{display: 'flex', justifyContent: 'right', marginBottom: '15px', columnGap: '8px'}}>
 
-							<FavouriteConversionButton />
+							<FavouriteConversionButton theme={'small-devices'} />
 
 							<CopyValueButton outputValue={ currentValue } />
 

@@ -39,7 +39,9 @@ const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						<TitleSep separatorStyles={'from-title-separator-large'} />
 						<br></br><br></br>
 						<div style={{display: 'flex', flexDirection: 'row', height: '25px', color: '#fff', justifyContent: 'right', paddingRight: '85px', columnGap: '12px'}}>
-							<FavouriteConversionButton />
+
+							<FavouriteConversionButton theme={'large-devices'} />
+
 							<div style={{marginTop: '5px'}}>
 								<CopyValueButton outputValue={ currentValue } />
 							</div>
