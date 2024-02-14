@@ -3,20 +3,28 @@ import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import {Col} from 'react-bootstrap';
 
 const FavouriteConversionButton = ({theme}: {theme: string}): JSX.Element => {
+	const handleClick = () => {
+		if (window.navigator.vibrate) {
+			window.navigator.vibrate(500);
+		} else {
+			console.log('haptic feedback not supported on device');
+		}
+	};
+
 	let favouriteButton: JSX.Element;
 
 	if (theme === 'large-devices') {
 		favouriteButton = <Col xs={1} sm={1} md={1} style={{display: 'flex', width: '40px', height: '40px', paddingTop: '9px', justifyContent: 'center', boxShadow: '1px 1px 5px 0px grey', borderRadius: '50%', marginTop: 'auto', marginBottom: 'auto', backgroundColor: '#fff', color: '#03c10c'}}>
-			<div>
+			<button onClick={handleClick} style={{backgroundColor: 'transparent', border: '0px solid', marginBottom: '20px'}}>
 				<FontAwesomeIcon icon={faHeart} size='xl' />
-			</div>
+			</button>
 		</Col>;
 	} else if (theme === 'small-devices') {
 		favouriteButton = <Col xs={1} sm={1} md={1} style={{display: 'flex', width: '40px', height: '40px', paddingTop: '9px', justifyContent: 'center', boxShadow: '1px 1px 5px 0px grey', borderRadius: '50%', marginTop: 'auto', marginBottom: 'auto'}}>
-			<div >
+			<button onClick={handleClick} style={{backgroundColor: 'transparent', border: '0px solid', marginBottom: '20px'}}>
 
 				<FontAwesomeIcon icon={faHeart} size='xl' />
-			</div>
+			</button>
 		</Col>;
 	}
 
