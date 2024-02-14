@@ -26,7 +26,8 @@ const UnitDetailsSmallTo = ({options, setToUnitDetails, setCurrentValue, calcula
 						<Col xs={4} sm={6} style={{display: 'flex', justifyContent: 'left'}} >
 							To:
 						</Col>
-						<Col xs={8} sm={6} style={{display: 'flex', justifyContent: 'right'}}>
+						<Col style={{display: 'flex', justifyContent: 'right', marginBottom: '15px', columnGap: '8px'}}>
+
 							<CopyValueButton outputValue={calculatedValue} />
 
 						</Col>

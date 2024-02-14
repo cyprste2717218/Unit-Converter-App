@@ -32,8 +32,6 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 		<div className='from-to-unit-options' >
 
 			<UnitDetailsLargeFrom
-				type={'From'}
-				title={'From'}
 				options={currentUnits}
 				setFromUnitDetails={setFromUnitDetails}
 				fromUnitDetails={currentUnits[0]}

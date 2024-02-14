@@ -12,6 +12,7 @@ import converter from './utilities/converter.js';
 import UnitConvNavbar from './components/unit-conv-navbar';
 import FromToUnitsOptions from './components/from-to-units-options';
 import UnitCategoryOptions from './components/unit-category-options';
+import FavouritesBarSmall from './components/favourites-bar-small';
 
 const App = () => {
 	const [checked, setChecked] = useState(false);
@@ -90,6 +91,9 @@ const App = () => {
 						currentValue={currentValue}
 
 					/>
+					<div style={{display: 'flex', justifyContent: 'center'}}>
+						<FavouritesBarSmall></FavouritesBarSmall>
+					</div>
 
 					<FromToUnitsOptions
 

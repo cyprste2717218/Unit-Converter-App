@@ -37,17 +37,16 @@ const CopyValueButton = ({outputValue}: {outputValue: string}): JSX.Element => {
 
 	return (
 		<>
-			<span style={{display: 'flex', flexDirection: 'row', width: '100%'}}>
+			<div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', marginBottom: '5px'}}>
 
-				<Col xs={11} sm={11} md={11} style={{display: 'flex', justifyContent: 'right'}}>
-					{copyButtonTextDisplayed && <div style={{position: 'relative'}}>Value Copied!</div>}
-				</Col>
 				<Col xs={1} sm={1} md={1} style={{display: 'flex', justifyContent: 'left', marginLeft: '10px'}}>
 					<FontAwesomeIcon className='copy-icon' icon={faCopy} onClick={onCopy} size='xl' />
 				</Col>
+				<Col xs={6} sm={6} md={6} style={{display: 'flex', justifyContent: 'left'}}>
+					{copyButtonTextDisplayed && <div style={{position: 'absolute'}}>Value Copied!</div>}
+				</Col>
 
-			</span>
-
+			</div>
 		</>
 	);
 };

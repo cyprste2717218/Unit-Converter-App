@@ -2,6 +2,7 @@ import {Col} from 'react-bootstrap';
 import {useState, type ChangeEvent} from 'react';
 import {type UnitFromSmallType} from '../types/unitDetailsType.ts';
 import CopyValueButton from './copy-value-button';
+import FavouriteConversionButton from './favourite-conversion-button';
 
 const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightSmall, currentValue}: UnitFromSmallType): JSX.Element => {
 	const [optionValue, setOptionValue] = useState(options[0]);
@@ -30,12 +31,16 @@ const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						<Col xs={4} sm={6} style={{display: 'flex', justifyContent: 'left'}} >
 							From:
 						</Col>
-						<Col xs={8} sm={6} style={{display: 'flex', justifyContent: 'right'}}>
+						<Col style={{display: 'flex', justifyContent: 'right', marginBottom: '15px', columnGap: '8px'}}>
+
+							<FavouriteConversionButton />
+
 							<CopyValueButton outputValue={ currentValue } />
 
 						</Col>
 
 					</span>
+
 					<div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
 
 						<span className='unit-details-span'>

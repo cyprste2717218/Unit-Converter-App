@@ -1,6 +1,6 @@
 const FavouritesBarSmall = () => (
 	<>
-		<div style={{borderColor: 'grey', backgroundColor: '#c7c7c7', height: '75px', color: '#000'}}>
+		<div style={{backgroundColor: '#fff', height: '80px', color: '#000', width: '100%', boxShadow: '1px 1px 5px 0px grey', marginTop: '5px'}}>
 
 			<p style={{padding: '5px'}}>Favourite Conversions:</p>
 
