@@ -13,6 +13,7 @@ import UnitConvNavbar from './components/unit-conv-navbar';
 import FromToUnitsOptions from './components/from-to-units-options';
 import UnitCategoryOptions from './components/unit-category-options';
 import FavouritesBarSmall from './components/favourites-bar-small';
+import FavouritesBarLarge from './components/favourites-bar-large';
 
 const App = () => {
 	const [checked, setChecked] = useState(false);
@@ -45,6 +46,7 @@ const App = () => {
 	const sectionHeight = 'calc(100vh - 225px)';
 	const sectionHeightSmall = 'calc(100vh - 225px)';
 	const sectionHeightLarge = 'calc(100vh - 205px)';
+	const sectionHeightFavouriteBar = 'calc(100vh - 335px)';
 
 	return (
 
@@ -92,7 +94,10 @@ const App = () => {
 
 					/>
 					<div style={{display: 'flex', justifyContent: 'left'}}>
-						<FavouritesBarSmall />
+						<FavouritesBarSmall height={sectionHeightFavouriteBar} />
+					</div>
+					<div>
+						<FavouritesBarLarge />
 					</div>
 
 					<FromToUnitsOptions
