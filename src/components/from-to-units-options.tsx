@@ -9,7 +9,7 @@ import UnitDetailsSmallFrom from './unit-details-small-from';
 import UnitDetailsSmallTo from './unit-details-small-to';
 import SwapDetailsButton from './swap-details-button';
 
-const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, sectionHeightLarge}: FromToUnitsOptionsInputsType): JSX.Element => {
+const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, sectionHeightLarge, allFavourites, setAllFavourites}: FromToUnitsOptionsInputsType): JSX.Element => {
 	const [fromUnitDetails, setFromUnitDetails] = useState(currentUnits[0]);
 	const [toUnitDetails, setToUnitDetails] = useState(currentUnits[0]);
 	const [currentValue, setCurrentValue] = useState('');
@@ -43,6 +43,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				currentValue={currentValue}
 				categoryValue={categoryValue}
 				sectionHeightLarge={sectionHeightLarge}
+				allFavourites={allFavourites}
+				setAllFavourites={setAllFavourites}
 			/>
 
 			{/* <SwapDetailsButton /> */}
@@ -72,6 +74,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				currentValue={currentValue}
 				categoryValue={categoryValue}
 				sectionHeightSmall={sectionHeightSmall}
+				allFavourites={allFavourites}
+				setAllFavourites={setAllFavourites}
 			/>
 			<UnitDetailsSmallTo
 				type={'To'}

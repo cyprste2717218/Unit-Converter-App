@@ -23,6 +23,7 @@ const App = () => {
 	const [toUnitDetails, setToUnitDetails] = useState(currentUnits[0]);
 	const [currentValue, setCurrentValue] = useState('');
 	const [calculatedValue, setCalculatedValue] = useState('');
+	const [allFavourites, setAllFavourites] = useState(localStorage);
 	const [previousCategoryValue, setPreviousCategoryValue] = useState(categoryValue);
 	const [show, setShow] = useState(false);
 
@@ -94,10 +95,16 @@ const App = () => {
 
 					/>
 					<div style={{display: 'flex', justifyContent: 'left'}}>
-						<FavouritesBarSmall height={sectionHeightFavouriteBar} />
+						<FavouritesBarSmall
+							allFavourites={allFavourites}
+							setAllFavourites={setAllFavourites}
+							height={sectionHeightFavouriteBar} />
 					</div>
 					<div>
-						<FavouritesBarLarge />
+						<FavouritesBarLarge
+							allFavourites={allFavourites}
+							setAllFavourites={setAllFavourites}
+						/>
 					</div>
 
 					<FromToUnitsOptions
@@ -116,6 +123,8 @@ const App = () => {
 						setPreviousCategoryValue={setPreviousCategoryValue}
 						sectionHeightSmall={sectionHeightSmall}
 						sectionHeightLarge={sectionHeightLarge}
+						allFavourites={allFavourites}
+						setAllFavourites={setAllFavourites}
 					/>
 
 				</div>

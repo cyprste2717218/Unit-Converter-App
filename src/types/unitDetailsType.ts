@@ -28,6 +28,10 @@ export type UnitFromLargeType = {
 	categoryValue: string;
 	sectionHeightLarge: string;
 	currentValue: string;
+	fromUnitDetails: string;
+	toUnitDetails: string;
+	allFavourites: Object;
+	setAllFavourites: React.Dispatch<React.SetStateAction<Object>>;
 
 }
 
@@ -51,6 +55,10 @@ export type UnitFromSmallType = {
 	categoryValue: string;
 	sectionHeightSmall: string;
 	currentValue: string;
+	fromUnitDetails: string;
+	toUnitDetails: string;
+	allFavourites: Object;
+	setAllFavourites: React.Dispatch<React.SetStateAction<Object>>;
 
 }
 

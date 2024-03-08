@@ -250,7 +250,7 @@
     display: flex;
     justify-content: center;
     box-shadow: 0px 0px 15px 0px #0000005c;
-    z-index: -1;
+    z-index: 0;
   }
 
   .unit-details-small-div {

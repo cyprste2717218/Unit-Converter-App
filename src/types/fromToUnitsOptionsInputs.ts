@@ -13,4 +13,6 @@ export type FromToUnitsOptionsInputsType = {
 	setPreviousCategoryValue: React.Dispatch<React.SetStateAction<string>>;
 	sectionHeightSmall: string;
 	sectionHeightLarge: string;
+	allFavourites: Object;
+	setAllFavourites: React.Dispatch<React.SetStateAction<Object>>;
 };

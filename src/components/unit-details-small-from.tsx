@@ -4,7 +4,7 @@ import {type UnitFromSmallType} from '../types/unitDetailsType.ts';
 import CopyValueButton from './copy-value-button';
 import FavouriteConversionButton from './favourite-conversion-button';
 
-const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightSmall, currentValue}: UnitFromSmallType): JSX.Element => {
+const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightSmall, currentValue, fromUnitDetails, toUnitDetails, allFavourites, setAllFavourites}: UnitFromSmallType): JSX.Element => {
 	const [optionValue, setOptionValue] = useState(options[0]);
 
 	const handleCurrentValueChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +33,13 @@ const UnitDetailsSmallFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						</Col>
 						<Col style={{display: 'flex', justifyContent: 'right', marginBottom: '15px', columnGap: '8px'}}>
 
-							<FavouriteConversionButton theme={'small-devices'} />
+							<FavouriteConversionButton
+								theme={'small-devices'}
+								fromUnitDetails={fromUnitDetails}
+								toUnitDetails={toUnitDetails}
+								allFavourites={allFavourites}
+								setAllFavourites={setAllFavourites}
+							/>
 
 							<CopyValueButton outputValue={ currentValue } />
 

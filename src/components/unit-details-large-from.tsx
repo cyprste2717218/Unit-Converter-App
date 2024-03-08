@@ -4,7 +4,7 @@ import {type UnitFromLargeType} from '../types/unitDetailsType';
 import CopyValueButton from './copy-value-button';
 import FavouriteConversionButton from './favourite-conversion-button';
 
-const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightLarge, currentValue}: UnitFromLargeType): JSX.Element => {
+const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, categoryValue, sectionHeightLarge, currentValue, fromUnitDetails, toUnitDetails, allFavourites, setAllFavourites}: UnitFromLargeType): JSX.Element => {
 	const [optionValue, setOptionValue] = useState(options[0]);
 
 	const handleCurrentValueChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +40,13 @@ const UnitDetailsLargeFrom = ({options, setFromUnitDetails, setCurrentValue, cat
 						<br></br><br></br>
 						<div style={{display: 'flex', flexDirection: 'row', height: '25px', color: '#fff', justifyContent: 'right', paddingRight: '85px', columnGap: '12px'}}>
 
-							<FavouriteConversionButton theme={'large-devices'} />
+							<FavouriteConversionButton
+								fromUnitDetails={fromUnitDetails}
+								toUnitDetails={toUnitDetails}
+								allFavourites={allFavourites}
+								setAllFavourites={setAllFavourites}
+								theme={'large-devices'}
+							/>
 
 							<div style={{marginTop: '5px'}}>
 								<CopyValueButton outputValue={ currentValue } />
