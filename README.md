@@ -33,7 +33,7 @@ Deployed with vercel.
 
 To use the Unit Converter app, simply:
 
-1). Choose a unit category via the category options navbar
-2). Choose units to convert from and to via the dropdowns
-3). Enter a value to convert from
+1). Choose a unit category via the category options navbar<br>
+2). Choose units to convert from and to via the dropdowns<br>
+3). Enter a value to convert from<br>
 4). Optionally copy the result to your device's clipboard using the copy button!
