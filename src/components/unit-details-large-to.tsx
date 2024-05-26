@@ -1,6 +1,6 @@
 
 import {useState, type ChangeEvent} from 'react';
-import {type UnitToLargeType} from '../types/unitDetailsType';
+import {type UnitToLargeType} from '../types/unit-details-type.ts';
 import CopyValueButton from './copy-value-button';
 
 const UnitDetailsLargeTo = ({options, setToUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightLarge, currentValue}: UnitToLargeType): JSX.Element => {

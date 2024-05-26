@@ -1,7 +1,5 @@
 
 const converter = (fromUnitDetails, toUnitDetails, currentValue, setCalculatedValue, categoryValue) => {
-	const calculateResult = () => {};
-
 	const conversions = {
 
 		Temperature: {

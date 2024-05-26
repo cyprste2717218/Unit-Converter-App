@@ -1,6 +1,6 @@
 import {Col} from 'react-bootstrap';
 import {useState, type ChangeEvent} from 'react';
-import {type UnitFromSmallType} from '../types/unitDetailsType.ts';
+import {type UnitFromSmallType} from '../types/unit-details-type.ts';
 import CopyValueButton from './copy-value-button';
 import FavouriteConversionButton from './favourite-conversion-button';
 

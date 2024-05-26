@@ -22,14 +22,20 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "vercel": "^32.3.0",
     "xo": "^0.56.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "xo && react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "lint": "xo src/**/*.{js,ts,tsx}",
+    "lint-fix": "xo src/**/*.{js,ts,tsx} --fix",
+    "eject": "react-scripts eject",
+    "prepare": "husky",
+    "check-branch-name": "powershell scripts/check_branch_naming.ps1"
   },
   "eslintConfig": {
     "extends": [
@@ -49,7 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "xo" : {
+  "xo": {
     "allowImportingTsExtensions": false,
     "import/extensions": "ignorePackages"
   }

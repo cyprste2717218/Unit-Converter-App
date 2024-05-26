@@ -1,6 +1,6 @@
 import {Col} from 'react-bootstrap';
 import {useState, type ChangeEvent} from 'react';
-import {type UnitToSmallType} from '../types/unitDetailsType.ts';
+import {type UnitToSmallType} from '../types/unit-details-type.ts';
 import CopyValueButton from './copy-value-button';
 
 const UnitDetailsSmallTo = ({options, setToUnitDetails, setCurrentValue, calculatedValue, categoryValue, sectionHeightSmall}: UnitToSmallType): JSX.Element => {

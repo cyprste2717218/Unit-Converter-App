@@ -1,28 +1,28 @@
 
 type Type = 'From' | 'To';
 
-export type UnitDetailsType = 
+export type UnitDetailsType =
 	 {
-		type: Type;
-		title: string;
-		options: string[];
-		setToUnitDetails: React.Dispatch<React.SetStateAction<string>>;
-		calculatedValue: string;
-		categoryValue: string;
-		sectionHeightSmall?: string;
-		sectionHeightLarge?: string;
-		setFromUnitDetails: React.Dispatch<React.SetStateAction<string>>;
-		fromUnitDetails: string;
-		result: Function;
-		toUnitDetails: string;
-		setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
-		currentValue: string;
-	
-	  } 
-	  
+	 	type: Type;
+	 	title: string;
+	 	options: string[];
+	 	setToUnitDetails: React.Dispatch<React.SetStateAction<string>>;
+	 	calculatedValue: string;
+	 	categoryValue: string;
+	 	sectionHeightSmall?: string;
+	 	sectionHeightLarge?: string;
+	 	setFromUnitDetails: React.Dispatch<React.SetStateAction<string>>;
+	 	fromUnitDetails: string;
+	 	result: Function;
+	 	toUnitDetails: string;
+	 	setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
+	 	currentValue: string;
+
+	  };
+
 export type UnitFromLargeType = {
 
-	options: string[]
+	options: string[];
 	setFromUnitDetails: React.Dispatch<React.SetStateAction<string>>;
 	setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
 	categoryValue: string;
@@ -30,14 +30,14 @@ export type UnitFromLargeType = {
 	currentValue: string;
 	fromUnitDetails: string;
 	toUnitDetails: string;
-	allFavourites: Object;
-	setAllFavourites: React.Dispatch<React.SetStateAction<Object>>;
+	allFavourites: Record<string, unknown>;
+	setAllFavourites: React.Dispatch<React.SetStateAction<Record<string, unknown>>>;
 
-}
+};
 
 export type UnitToLargeType = {
-	
-	options: string[]
+
+	options: string[];
 	setToUnitDetails: React.Dispatch<React.SetStateAction<string>>;
 	setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
 	calculatedValue: string;
@@ -45,11 +45,11 @@ export type UnitToLargeType = {
 	sectionHeightLarge: string;
 	currentValue: string;
 
-}
+};
 
 export type UnitFromSmallType = {
 
-	options: string[]
+	options: string[];
 	setFromUnitDetails: React.Dispatch<React.SetStateAction<string>>;
 	setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
 	categoryValue: string;
@@ -57,14 +57,14 @@ export type UnitFromSmallType = {
 	currentValue: string;
 	fromUnitDetails: string;
 	toUnitDetails: string;
-	allFavourites: Object;
-	setAllFavourites: React.Dispatch<React.SetStateAction<Object>>;
+	allFavourites: Record<string, unknown>;
+	setAllFavourites: React.Dispatch<React.SetStateAction<Record<string, unknown>>>;
 
-}
+};
 
 export type UnitToSmallType = {
-	
-	options: string[]
+
+	options: string[];
 	setToUnitDetails: React.Dispatch<React.SetStateAction<string>>;
 	setCurrentValue: React.Dispatch<React.SetStateAction<string>>;
 	calculatedValue: string;
@@ -72,6 +72,5 @@ export type UnitToSmallType = {
 	sectionHeightSmall: string;
 	currentValue: string;
 
-
-}
+};
 

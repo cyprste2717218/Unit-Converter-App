@@ -1,0 +1,2 @@
+echo "[Husky] pre-commit hook started"
+npx lint-staged && npm run check-branch-name
