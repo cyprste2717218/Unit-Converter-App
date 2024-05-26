@@ -1,0 +1,2 @@
+echo "[Husky] pre-push hook started"
+npm run build

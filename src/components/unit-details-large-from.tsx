@@ -1,6 +1,6 @@
 
 import {useState, type ChangeEvent} from 'react';
-import {type UnitFromLargeType} from '../types/unitDetailsType';
+import {type UnitFromLargeType} from '../types/unit-details-type.ts';
 import CopyValueButton from './copy-value-button';
 import FavouriteConversionButton from './favourite-conversion-button';
 

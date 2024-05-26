@@ -1,13 +1,13 @@
 
 import {Container, Row} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
-import converter from '../utilities/converter';
-import {type FromToUnitsOptionsInputsType} from '../types/fromToUnitsOptionsInputs';
+import converter from '../utilities/converter.js';
+import {type FromToUnitsOptionsInputsType} from '../types/from-to-units-options-inputs.ts';
 import UnitDetailsLargeFrom from './unit-details-large-from';
 import UnitDetailsLargeTo from './unit-details-large-to';
 import UnitDetailsSmallFrom from './unit-details-small-from';
 import UnitDetailsSmallTo from './unit-details-small-to';
-import SwapDetailsButton from './swap-details-button';
+// Import SwapDetailsButton from './swap-details-button';
 
 const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, sectionHeightLarge, allFavourites, setAllFavourites}: FromToUnitsOptionsInputsType): JSX.Element => {
 	const [fromUnitDetails, setFromUnitDetails] = useState(currentUnits[0]);
