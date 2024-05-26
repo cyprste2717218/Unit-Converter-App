@@ -58,5 +58,8 @@
   "xo": {
     "allowImportingTsExtensions": false,
     "import/extensions": "ignorePackages"
+  },
+  "lint-staged": {
+    "*": "npm run lint-fix"
   }
 }
