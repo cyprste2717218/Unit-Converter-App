@@ -23,7 +23,7 @@ const App = () => {
 	const [toUnitDetails, setToUnitDetails] = useState(currentUnits[0]);
 	const [currentValue, setCurrentValue] = useState('');
 	const [calculatedValue, setCalculatedValue] = useState('');
-	const [allFavourites, setAllFavourites] = useState(localStorage);
+	const [allFavourites, setAllFavourites] = useState<Record<string, unknown>>(localStorage as unknown as Record<string, unknown>);
 	const [previousCategoryValue, setPreviousCategoryValue] = useState(categoryValue);
 	const [show, setShow] = useState(false);
 

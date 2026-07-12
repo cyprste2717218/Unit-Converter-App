@@ -3,10 +3,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import {faHeart as faOutlineHeart} from '@fortawesome/free-regular-svg-icons';
 import {Col} from 'react-bootstrap';
-// Import {type FavouriteConversionButtonType} from '../types/favourite-conversion-button-type.ts';
+import {type FavouriteConversionButtonType} from '../types/favourite-conversion-button-type.ts';
 import addFavourite from '../utilities/add-favourite.js';
 
-const FavouriteConversionButton = ({theme, fromUnitDetails, toUnitDetails, allFavourites, setAllFavourites}: favouriteConversionButtonType): JSX.Element => {
+const FavouriteConversionButton = ({theme, fromUnitDetails, toUnitDetails, allFavourites, setAllFavourites}: FavouriteConversionButtonType): JSX.Element => {
 	const [FavButtonEnabled, setFavButtonEnabled] = useState(false);
 
 	const handleClick = () => {

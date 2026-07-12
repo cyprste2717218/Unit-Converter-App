@@ -3,7 +3,7 @@ import {faHeart, faXmark} from '@fortawesome/free-solid-svg-icons';
 import {Col} from 'react-bootstrap';
 import {useState} from 'react';
 
-const FavouritesBarSmall = ({height, favourites, setAllFavourites}) => {
+const FavouritesBarSmall = ({height, allFavourites, setAllFavourites}: {height: string; allFavourites: any; setAllFavourites: any}): JSX.Element => {
 	const [expanded, setExpanded] = useState(false);
 
 	const labelStyle = expanded ? 'expanded-favbar-label-style' : 'unexpanded-favbar-label-style';
