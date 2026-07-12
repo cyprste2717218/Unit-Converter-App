@@ -20,6 +20,7 @@ export type OptionType = {
 };
 
 export type UnitsType = {
+	[key: string]: string[];
 	Temperature: string[];
 	Length: string[];
 	Area: string[];
