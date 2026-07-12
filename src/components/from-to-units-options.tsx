@@ -35,9 +35,6 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				options={currentUnits}
 				setFromUnitDetails={setFromUnitDetails}
 				fromUnitDetails={currentUnits[0]}
-				result={() => {
-					converter(fromUnitDetails, toUnitDetails);
-				}}
 				toUnitDetails={currentUnits[0]}
 				setCurrentValue={setCurrentValue}
 				currentValue={currentValue}
@@ -50,10 +47,9 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 			{/* <SwapDetailsButton /> */}
 
 			<UnitDetailsLargeTo
-				type={'To'}
-				title={'To'}
 				options={currentUnits}
 				setToUnitDetails={setToUnitDetails}
+				setCurrentValue={setCurrentValue}
 				currentValue={calculatedValue}
 				calculatedValue={calculatedValue}
 				categoryValue={categoryValue}
@@ -61,13 +57,8 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 			/>
 
 			<UnitDetailsSmallFrom
-				type={'From'}
-				title={'From'}
 				options={currentUnits}
 				setFromUnitDetails={setFromUnitDetails}
-				result={() => {
-					converter(fromUnitDetails, toUnitDetails);
-				}}
 				fromUnitDetails={currentUnits[0]}
 				toUnitDetails={currentUnits[0]}
 				setCurrentValue={setCurrentValue}
@@ -78,10 +69,9 @@ const FromToUnitsOptions = ({currentUnits, categoryValue, sectionHeightSmall, se
 				setAllFavourites={setAllFavourites}
 			/>
 			<UnitDetailsSmallTo
-				type={'To'}
-				title={'To'}
 				options={currentUnits}
 				setToUnitDetails={setToUnitDetails}
+				setCurrentValue={setCurrentValue}
 				currentValue={calculatedValue}
 				calculatedValue={calculatedValue}
 				categoryValue={categoryValue}

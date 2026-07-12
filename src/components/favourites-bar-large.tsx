@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faXmark} from '@fortawesome/free-solid-svg-icons';
 import {useState} from 'react';
 
-const FavouritesBarLarge = ({favourites, setAllFavourites}): JSX.Element => {
+const FavouritesBarLarge = ({allFavourites, setAllFavourites}: {allFavourites: any; setAllFavourites: any}): JSX.Element => {
 	const [expanded, setExpanded] = useState(false);
 
 	const setFavouritesBarState = () => {
@@ -10,10 +10,10 @@ const FavouritesBarLarge = ({favourites, setAllFavourites}): JSX.Element => {
 	};
 
 	let displayedFavourites: JSX.Element;
-	if (favourites === undefined) {
+	if (allFavourites === undefined) {
 		displayedFavourites = <div>error</div>;
 	} else {
-		displayedFavourites = favourites.length > 0 ? <div>{favourites[0]}</div> : <div>no favourites</div>;
+		displayedFavourites = allFavourites.length > 0 ? <div>{allFavourites[0]}</div> : <div>no favourites</div>;
 	}
 
 	const UnexpandedFavouritesBar = () => (

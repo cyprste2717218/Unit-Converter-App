@@ -2,7 +2,7 @@ import React from 'react';
 import {Col} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChartArea, faClock, faFlask, faGaugeHigh, faRulerCombined, faSterlingSign, faTemperatureHalf, faWeightHanging, faBolt, faAngleRight, faServer, faGasPump, IconDefinition} from '@fortawesome/free-solid-svg-icons';
-import {type UnitCategoryOptionsType, type OptionType, type UnitsType} from '../types/unitCategoryOptionsTypes.ts';
+import {type UnitCategoryOptionsType, type OptionType, type UnitsType} from '../types/unit-category-options-types.ts';
 
 const UnitCategoryOptions = ({categoryValue, setCategoryValue, setCurrentUnits}: UnitCategoryOptionsType): JSX.Element => {
 	const handleClick = (option: OptionType) => {
